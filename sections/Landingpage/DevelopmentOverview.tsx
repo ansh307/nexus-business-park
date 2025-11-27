@@ -114,7 +114,7 @@ const DevelopmentOverview = () => {
                   {section.description}
                 </p>
 
-                <button className="mt-8 group inline-flex items-center gap-2 rounded-full border border-gray-300 px-6 py-3 text-sm font-medium text-gray-900 transition-all hover:bg-gray-900 hover:text-white hover:border-gray-900">
+                <button className="mt-8 group inline-flex items-center gap-2 rounded-full border border-gray-300 px-6 py-3 text-sm font-medium text-dark transition-all bg-mattblack-hover text-light-hover ">
                   Learn More
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

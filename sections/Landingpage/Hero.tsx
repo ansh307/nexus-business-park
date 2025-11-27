@@ -17,12 +17,12 @@ const Hero = () => {
 
       <div className="relative z-10 flex h-full flex-col px-6 md:px-12 lg:px-24  ">
         <header className="flex w-full items-center justify-between py-6 md:py-8">
-          <div className="text-xl font-light tracking-wide md:text-2xl">
+          <div className="text-xl font-light tracking-wide md:text-2xl uppercase">
             Nexus
           </div>
 
           <nav>
-            <ul className="flex items-center gap-8">
+            <ul className="flex items-center gap-8 uppercase text-light">
               <li>
                 <a href="#" className="">
                   Home
@@ -64,7 +64,9 @@ const Hero = () => {
         <div className="flex flex-1 flex-col items-center justify-center text-center  pb-20 px-10 ">
           <h1 className="max-w-4xl text-5xl font-bold font-interTight-700 leading-tight tracking-tight md:text-6xl lg:text-7xl ">
             Warehouse Architecture <br />
-            NEXUS
+            <span className="md:text-6xl lg:text-[100px] tracking-wide">
+              NEXUS
+            </span>
           </h1>
 
           {/* <p className="mt-6 max-w-2xl text-lg text-gray-200 md:text-xl">

@@ -47,6 +47,10 @@
   color: var(--color-text-light);
 }
 
+.text-light-hover:hover {
+  color: var(--color-text-light);
+}
+
 .text-muted {
   color: var(--color-text-muted);
 }
@@ -80,6 +84,10 @@
 }
 
 .bg-mattblack {
+  background-color: var(--color-bg-mattblack);
+}
+
+.bg-mattblack-hover:hover {
   background-color: var(--color-bg-mattblack);
 }
 

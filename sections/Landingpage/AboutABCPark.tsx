@@ -58,17 +58,17 @@ const AboutABCPark = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start ">
         {/* LEFT SIDE — SCROLLS NATURALLY */}
         <div ref={leftRef} className="col-span-5 space-y-6 ">
-          <div className="bg-brand p-8 md:p-12 rounded-3xl border border-gray-100 shadow-sm">
-            <h3 className="text-2xl font-semibold mb-8 text-gray-900 expect-item">
+          <div className="bg-brand p-8 md:p-12 rounded-3xl ">
+            <h3 className="text-2xl font-semibold mb-8 text-slate expect-item">
               What You Can Expect
             </h3>
 
             <div className="space-y-4 ">
               {expectations.map((text, index) => (
                 <div key={index} className="flex items-start group expect-item">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5 mr-4 group-hover:bg-brass transition-colors duration-300">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5 mr-4 transition-colors duration-300">
                     <svg
-                      className="w-3.5 h-3.5 text-brass group-hover:text-white transition-colors duration-300"
+                      className="w-3.5 h-3.5 text-brass  transition-colors duration-300"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -81,7 +81,7 @@ const AboutABCPark = () => {
                       ></path>
                     </svg>
                   </div>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  <p className="text-base md:text-lg text-slate leading-relaxed">
                     {text}
                   </p>
                 </div>
