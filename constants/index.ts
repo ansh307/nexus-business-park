@@ -87,10 +87,10 @@ export const testimonialsData = [
 export const carouselImages = [
   { id: 1, src: "/warehouse-1.png", alt: "Modern cityscape one" },
   { id: 2, src: "/warehouse-2.png", alt: "Modern cityscape two" },
-  { id: 3, src: "/warehouse-3.png", alt: "Modern cityscape three" },
+  { id: 3, src: "/warehouse-3-new.png", alt: "Modern cityscape three" },
   { id: 4, src: "/warehouse-4.png", alt: "Modern cityscape four" },
   { id: 5, src: "/warehouse-5.png", alt: "Modern cityscape five" },
-  { id: 6, src: "/warehouse-6.png", alt: "Modern cityscape six" },
+  { id: 6, src: "/warehouse-6-new.png", alt: "Modern cityscape six" },
 ];
 
 // DevelopmentOverview Data
@@ -100,7 +100,7 @@ export const developmentOverviewSections = [
     title: "Masterplanned for — efficiency & flow",
     description:
       "Nexus Business Park is designed with a clear, functional layout—featuring streamlined vehicle access, spacious loading zones, and well-positioned offices to support a wide range of business operations.",
-    image: "/site-dev-plan-1.png", // Using placeholder, user can update
+    image: "/3.jpg", // Using placeholder, user can update
     imageAlt: "Modern glass building facade",
     reverse: false,
   },
@@ -109,7 +109,7 @@ export const developmentOverviewSections = [
     title: "Thoughtfully landscaped — clarity & balance",
     description:
       "The development incorporates structured landscaping with canopy trees, pathways, and green buffers—enhancing visual appeal while supporting a clean, professional environment for businesses.",
-    image: "/site-dev-plan-2.png", // Using placeholder
+    image: "/2.jpg", // Using placeholder
     imageAlt: "Landscaped business park environment",
     reverse: true,
   },
@@ -118,7 +118,7 @@ export const developmentOverviewSections = [
     title: "Architectural excellence — refined façades",
     description:
       "Clean lines, high-quality materials, and professional façade elements define the character of the warehouses—balancing function with a strong architectural presence.",
-    image: "/site-dev-plan-3.png", // Using placeholder
+    image: "/5.png", // Using placeholder
     imageAlt: "Architectural details of warehouse",
     reverse: false,
   },

@@ -12,10 +12,10 @@ const GSAPImageCarousel: React.FC = () => {
   const originalImages: ImageItem[] = [
     { id: 1, src: "/warehouse-1.png", alt: "Modern cityscape one" },
     { id: 2, src: "/warehouse-2.png", alt: "Modern cityscape two" },
-    { id: 3, src: "/warehouse-3.png", alt: "Modern cityscape three" },
+    { id: 3, src: "/warehouse-3-new.png", alt: "Modern cityscape three" },
     { id: 4, src: "/warehouse-4.png", alt: "Modern cityscape four" },
     { id: 5, src: "/warehouse-5.png", alt: "Modern cityscape five" },
-    { id: 6, src: "/warehouse-6.png", alt: "Modern cityscape six" },
+    { id: 6, src: "/warehouse-6-new.png", alt: "Modern cityscape six" },
   ];
 
   const VISIBLE_ITEMS = 2;

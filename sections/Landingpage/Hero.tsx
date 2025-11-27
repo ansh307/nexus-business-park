@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative h-[110vh] w-full overflow-hidden section-dark">
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero-section.png"
+          src="/hero-section-new.png"
           alt="Warehouse"
           className="absolute inset-0 h-full w-full object-cover rounded-b-[80px]"
         />
@@ -73,7 +73,7 @@ const Hero = () => {
           </p> */}
 
           <div className="mt-10">
-            <button className="group flex items-center gap-3 rounded-full  px-8 py-3 text-base font-semibold transition-all hover:bg-white hover:text-black">
+            <button className="group flex items-center gap-3 border rounded-full  px-8 py-3 text-base font-semibold transition-all hover:bg-white hover:text-black">
               Enquire Now
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -53,48 +53,53 @@ export default function LocationHighlights() {
       ref={sectionRef}
       className="w-full bg-ivory py-28 px-4 md:px-12 lg:px-34 relative overflow-hidden"
     >
-      {/* Heading */}
       <h1 className="text-[28px] md:text-[34px] lg:text-[38px] font-semibold text-dark leading-snug max-w-5xl card-item">
-        Strategically positioned in the heart of Officer South’s emerging
-        industrial corridor.
+        A trusted team delivering premium industrial developments.
       </h1>
 
       <div ref={cardsRef}>
         {/* Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          {/* Developer Profile */}
           <div className="bg-brand p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
             <p className="text-slate text-[16px] leading-relaxed">
-              1.5km from the Monash Freeway
+              Over 20+ years of experience in delivering commercial and
+              industrial projects across Victoria.
             </p>
           </div>
 
+          {/* Past Project Visuals / Experience */}
           <div className="bg-brand p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
             <p className="text-slate text-[16px] leading-relaxed">
-              Prime Cardinia Road access
+              Proven track record with successful business parks, logistics
+              hubs, and warehouse precincts.
             </p>
           </div>
 
+          {/* Strengths */}
           <div className="bg-brand p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
             <p className="text-slate text-[16px] leading-relaxed">
-              Surrounded by major growth & development
+              Focus on architectural quality, efficient layouts, and long-term
+              investment value.
             </p>
           </div>
         </div>
 
-        {/* Bottom two cards */}
+        {/* Bottom Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          {/* Recognition / Team Strength */}
           <div className="bg-brand p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start gap-4 card-item">
-            <div className="w-10 h-10 rounded-full border flex items-center justify-center">
-              <span className="text-xl">◇</span>
-            </div>
             <p className="text-slate text-[16px] leading-relaxed">
-              Future connectivity via Thompsons Road extension
+              Recognised for consistent delivery, quality workmanship, and
+              commitment to Australian industrial standards.
             </p>
           </div>
 
+          {/* Additional Trust Indicator */}
           <div className="bg-brand p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
             <p className="text-slate text-[16px] leading-relaxed">
-              Close to essential local amenities
+              Supported by a specialist project team including architects,
+              engineers, and commercial property experts.
             </p>
           </div>
         </div>

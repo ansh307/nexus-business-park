@@ -27,10 +27,15 @@ export default function Home() {
   const wrapperRef = useRef(null);
   const infoRef = useRef(null); // <-- NEW
 
+  const testimonialWrapperRef = useRef(null);
+  const testimonialRef = useRef(null);
+  const footerRef = useRef(null);
+
   useEffect(() => {
     const hero = heroRef.current;
     const info = infoRef.current;
-
+    const testimonial = testimonialWrapperRef.current;
+    const footer = footerRef.current;
     // HERO SLIDES UP → REVEALS ABCParkInfo
     gsap.to(hero, {
       y: "-40vh", // amount hero moves up
@@ -82,8 +87,8 @@ export default function Home() {
       {/* <RoundedCityImage />
       <AffordableWarehouseSection /> */}
       <WarehouseShowcase />
-      <GSAPTestimonialCarousel />
       {/* <LimitedOpportunity /> */}
+      <GSAPTestimonialCarousel />
       <FooterWithForm />
     </main>
   );
