@@ -2,7 +2,7 @@ import React from "react";
 
 const AffordableWarehouseSection = () => {
   return (
-    <div className="max-w-7xl h-screen mx-auto p-6 md:p-12 font-sans">
+    <div className="max-w-7xl h-screen mx-auto p-6 md:p-12 ">
       <div className="grid grid-cols-1 md:grid-cols-2 h-full gap-8 md:gap-12 items-stretch">
         <div className="flex">
           <div className="bg-[#EAE8E3] rounded-3xl p-8 md:p-12 h-full w-full">

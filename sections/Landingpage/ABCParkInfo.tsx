@@ -63,14 +63,14 @@ export default function ABCParkInfo() {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full bg-white py-10 md:py-16">
-      <div className=" mx-auto px-4 md:px-34 font-sans">
+    <div ref={sectionRef} className="w-full section-dark py-10 md:py-16">
+      <div className=" mx-auto px-4 md:px-34 ">
         {/* Header */}
         <div className="mb-10 md:mb-12">
           <p
             className="
               text-lg sm:text-xl md:text-[22px] lg:text-[24px] xl:text-[35px]
-              text-gray-800/90 leading-normal font-geist-sans
+              text-light leading-normal 
             "
           >
             Nexus Business Park is the first and only premium strata warehouse
@@ -83,7 +83,7 @@ export default function ABCParkInfo() {
 
         {/* Section Label */}
         <div className="mb-5 md:mb-10 mt-40">
-          <h2 className="text-[11px] md:text-lg font-bold uppercase tracking-[0.25em] text-gray-500">
+          <h2 className="text-[11px] md:text-lg font-bold uppercase tracking-[0.25em] text-muted">
             Why Choose Us?
           </h2>
         </div>
@@ -106,16 +106,16 @@ export default function ABCParkInfo() {
               <div className="flex items-start gap-6">
                 {/* Diamond Icon */}
                 <div className="mt-1">
-                  <div className="w-3.5 h-3.5 md:w-4 md:h-4 border-2 border-gray-400 rotate-45"></div>
+                  <div className="w-3.5 h-3.5 md:w-4 md:h-4 border-2 border-muted rotate-45"></div>
                 </div>
 
                 {/* ANIMATED CONTENT */}
                 <div className="overflow-hidden z-10 wwa-content">
-                  <h3 className="wwa-part text-base md:text-[17px] font-semibold text-gray-900">
+                  <h3 className="wwa-part text-base md:text-[17px] font-semibold text-light">
                     {f.title}
                   </h3>
 
-                  <p className="wwa-part text-sm text-gray-600 mt-2 leading-relaxed">
+                  <p className="wwa-part text-sm text-muted mt-2 leading-relaxed">
                     {f.description}
                   </p>
                 </div>

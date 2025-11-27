@@ -71,7 +71,7 @@ const GSAPImageCarousel: React.FC = () => {
   return (
     <div className="flex flex-col items-center py-12 px-4 md:px-0">
       <div
-        className="max-w-6xl w-full overflow-hidden"
+        className="max-w-7xl w-full overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >

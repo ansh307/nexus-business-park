@@ -30,7 +30,7 @@ const RoundedCityImage = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-[1350px]  mx-auto px-4 sm:px-6 md:px-12 py-6 md:py-12">
+    <div className="w-full max-w-[1350px]  mx-auto px-4 sm:px-6 md:px-12 py-6 md:py-12 md:pb-28">
       <div
         ref={imgWrapperRef}
         className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[75vh]

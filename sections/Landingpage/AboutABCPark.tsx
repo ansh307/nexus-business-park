@@ -54,14 +54,11 @@ const AboutABCPark = () => {
   }, []);
 
   return (
-    <div
-      ref={sectionRef}
-      className="max-w-7xl mx-auto px-6 py-20 md:py-24 font-sans"
-    >
+    <div ref={sectionRef} className="max-w-7xl mx-auto px-6 py-20 md:py-28 ">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start ">
         {/* LEFT SIDE — SCROLLS NATURALLY */}
         <div ref={leftRef} className="col-span-5 space-y-6 ">
-          <div className="bg-gray-50 p-8 md:p-12 rounded-3xl border border-gray-100 shadow-sm">
+          <div className="bg-brand p-8 md:p-12 rounded-3xl border border-gray-100 shadow-sm">
             <h3 className="text-2xl font-semibold mb-8 text-gray-900 expect-item">
               What You Can Expect
             </h3>
@@ -69,9 +66,9 @@ const AboutABCPark = () => {
             <div className="space-y-4 ">
               {expectations.map((text, index) => (
                 <div key={index} className="flex items-start group expect-item">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center mt-0.5 mr-4 group-hover:bg-amber-600 transition-colors duration-300">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5 mr-4 group-hover:bg-brass transition-colors duration-300">
                     <svg
-                      className="w-3.5 h-3.5 text-amber-600 group-hover:text-white transition-colors duration-300"
+                      className="w-3.5 h-3.5 text-brass group-hover:text-white transition-colors duration-300"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -95,14 +92,14 @@ const AboutABCPark = () => {
         <div className="hidden lg:block col-span-1"></div>
         {/* RIGHT SIDE — STICKY */}
         <div ref={rightRef} className="col-span-5 lg:sticky lg:top-28 h-fit">
-          <h2 className="right-animate text-3xl md:text-4xl lg:text-5xl font-light mb-8 text-gray-900 tracking-tight leading-tight">
+          <h2 className="right-animate text-3xl md:text-4xl lg:text-5xl font-light mb-8 text-light tracking-tight leading-tight">
             About <span className="font-semibold">Nexus Business Park</span>
           </h2>
 
-          <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+          <div className="space-y-6 text-lg text-muted leading-relaxed">
             <p className="right-animate">
               Nexus Business Park brings{" "}
-              <strong className="text-gray-900">
+              <strong className="text-brass">
                 17 architecturally designed warehouses
               </strong>{" "}
               to Officer South, combining high-quality construction with a

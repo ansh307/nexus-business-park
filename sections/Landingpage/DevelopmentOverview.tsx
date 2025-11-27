@@ -54,14 +54,11 @@ const DevelopmentOverview = () => {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="w-full bg-white py-20 md:py-28 font-sans"
-    >
+    <section ref={sectionRef} className="w-full bg-ivory py-20 md:py-28 ">
       <div className="w-full mx-auto px-6 md:px-12 lg:px-34">
         {/* Section Heading */}
         <div className="mb-16 md:mb-24">
-          <h2 className="text-[11px] md:text-lg font-bold uppercase tracking-[0.25em] text-gray-500">
+          <h2 className="text-[11px] md:text-lg font-bold uppercase tracking-[0.25em] text-slate">
             Development Overview
           </h2>
         </div>
@@ -97,7 +94,7 @@ const DevelopmentOverview = () => {
                   section.reverse ? "mr-auto" : "ml-auto"
                 }`}
               >
-                <h3 className="text-animate text-2xl md:text-3xl lg:text-4xl font-light text-gray-900 mb-6 leading-tight">
+                <h3 className="text-animate text-2xl md:text-3xl lg:text-4xl font-light text-dark mb-6 leading-tight">
                   {section.title.split("—").map((part, i) => (
                     <span key={i}>
                       {i === 1 ? (
@@ -113,7 +110,7 @@ const DevelopmentOverview = () => {
                   ))}
                 </h3>
 
-                <p className="text-animate text-gray-600 text-base md:text-lg leading-relaxed mb-8">
+                <p className="text-animate text-slate text-base md:text-lg leading-relaxed mb-8">
                   {section.description}
                 </p>
 

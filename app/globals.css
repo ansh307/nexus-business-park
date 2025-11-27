@@ -6,9 +6,128 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* GLOBAL THEME COLORS */
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #2f3237;
+  --color-bg-mattblack: #111111;
+  /* slate charcoal */
+  --color-bg-ivory: #F4F2EE;
+  --color-bg-brand: #E8E3D9;
+
+  --color-text-dark: #111111;
+  --color-text-light: #F4F2EE;
+  --color-text-muted: #A6A29A;
+  --color-text-slate: #2f3237;
+
+  --color-accent-brass: #C8A96A;
+  --color-accent-eucalyptus: #5A7C67;
+
+  --background: var(--color-bg-mattblack);
+  --foreground: var(--color-text-light);
 }
+
+
+.section-dark {
+  background-color: var(--color-bg-mattblack);
+  color: var(--color-text-light);
+}
+
+.section-slate {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+}
+
+
+/* TEXT UTILITIES */
+.text-dark {
+  color: var(--color-text-dark);
+}
+
+.text-light {
+  color: var(--color-text-light);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-slate {
+  color: var(--color-text-slate);
+}
+
+.text-brass {
+  color: var(--color-accent-brass);
+}
+
+.text-eucalyptus {
+  color: var(--color-accent-eucalyptus);
+}
+
+.bg-brass {
+  background-color: var(--color-accent-brass);
+}
+
+.bg-light {
+  background-color: var(--color-bg-light);
+}
+
+.bg-dark {
+  background-color: var(--color-bg-dark);
+}
+
+.bg-ivory {
+  background-color: var(--color-bg-ivory);
+}
+
+.bg-mattblack {
+  background-color: var(--color-bg-mattblack);
+}
+
+.bg-brand {
+  background-color: var(--color-bg-brand);
+}
+
+.border-muted {
+  border-color: var(--color-text-muted);
+}
+
+/* REGISTER LOCAL FONT VARIABLE */
+.font-interTight {
+  font-family: var(--font-interTight), sans-serif;
+}
+
+/* WEIGHT UTILITIES */
+.font-interTight-500 {
+  font-family: var(--font-interTight), sans-serif;
+  font-weight: 500;
+}
+
+.font-interTight-600 {
+  font-family: var(--font-interTight), sans-serif;
+  font-weight: 600;
+}
+
+.font-interTight-700 {
+  font-family: var(--font-interTight), sans-serif;
+  font-weight: 700;
+}
+
+.font-interBody {
+  font-family: var(--font-interBody), sans-serif;
+}
+
+/* WEIGHT UTILITIES */
+.font-interBody-400 {
+  font-family: var(--font-interBody), sans-serif;
+  font-weight: 400;
+}
+
+.font-interBody-300 {
+  font-family: var(--font-interBody), sans-serif;
+  font-weight: 300;
+}
+
+
 
 body {
   color: var(--foreground);
@@ -16,6 +135,9 @@ body {
   font-family: var(--font-geist-sans);
 }
 
+
+
+/* lenis class */
 
 html.lenis,
 html.lenis body {

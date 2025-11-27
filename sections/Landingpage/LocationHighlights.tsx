@@ -51,10 +51,10 @@ export default function LocationHighlights() {
   return (
     <div
       ref={sectionRef}
-      className="w-full bg-[#F1EEE7] py-20 px-4 md:px-12 lg:px-34 relative overflow-hidden"
+      className="w-full bg-ivory py-28 px-4 md:px-12 lg:px-34 relative overflow-hidden"
     >
       {/* Heading */}
-      <h1 className="text-[28px] md:text-[34px] lg:text-[38px] font-semibold text-[#333] leading-snug max-w-5xl card-item">
+      <h1 className="text-[28px] md:text-[34px] lg:text-[38px] font-semibold text-dark leading-snug max-w-5xl card-item">
         Strategically positioned in the heart of Officer South’s emerging
         industrial corridor.
       </h1>
@@ -62,20 +62,20 @@ export default function LocationHighlights() {
       <div ref={cardsRef}>
         {/* Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-          <div className="bg-white p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
-            <p className="text-[#333] text-[16px] leading-relaxed">
+          <div className="bg-brand p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
+            <p className="text-slate text-[16px] leading-relaxed">
               1.5km from the Monash Freeway
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
-            <p className="text-[#333] text-[16px] leading-relaxed">
+          <div className="bg-brand p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
+            <p className="text-slate text-[16px] leading-relaxed">
               Prime Cardinia Road access
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
-            <p className="text-[#333] text-[16px] leading-relaxed">
+          <div className="bg-brand p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
+            <p className="text-slate text-[16px] leading-relaxed">
               Surrounded by major growth & development
             </p>
           </div>
@@ -83,17 +83,17 @@ export default function LocationHighlights() {
 
         {/* Bottom two cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-          <div className="bg-white p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start gap-4 card-item">
+          <div className="bg-brand p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start gap-4 card-item">
             <div className="w-10 h-10 rounded-full border flex items-center justify-center">
               <span className="text-xl">◇</span>
             </div>
-            <p className="text-[#333] text-[16px] leading-relaxed">
+            <p className="text-slate text-[16px] leading-relaxed">
               Future connectivity via Thompsons Road extension
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
-            <p className="text-[#333] text-[16px] leading-relaxed">
+          <div className="bg-brand p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
+            <p className="text-slate text-[16px] leading-relaxed">
               Close to essential local amenities
             </p>
           </div>

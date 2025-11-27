@@ -61,7 +61,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className="flex min-h-screen font-interBody-400 flex-col items-center justify-between">
       <div ref={wrapperRef} className="relative w-full overflow-hidden">
         {/* HERO */}
         <div ref={heroRef}>
@@ -76,14 +76,14 @@ export default function Home() {
       <RoundedCityImage />
       <DevelopmentOverview />
       <AboutABCPark />
-      <GSAPImageCarousel />
-      <FeaturesSection />
+      {/* <GSAPImageCarousel /> */}
+      {/* <FeaturesSection /> */}
       <LocationHighlights />
       {/* <RoundedCityImage />
       <AffordableWarehouseSection /> */}
       <WarehouseShowcase />
       <GSAPTestimonialCarousel />
-      <LimitedOpportunity />
+      {/* <LimitedOpportunity /> */}
       <FooterWithForm />
     </main>
   );
