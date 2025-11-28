@@ -92,7 +92,9 @@ const FooterWithForm = () => {
             </p>
             <ul className="space-y-2 text-light/80 text-sm">
               <li>Developer</li>
-              <li>Contact</li>
+              <li>
+                <a href="/contact">Contact</a>
+              </li>
               <li>Privacy Policy</li>
               <li>Disclaimer</li>
             </ul>

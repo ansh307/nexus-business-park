@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { developmentOverviewSections } from "@/constants";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,7 +115,10 @@ const DevelopmentOverview = () => {
                   {section.description}
                 </p>
 
-                <button className="mt-8 group inline-flex items-center gap-2 rounded-full border border-gray-300 px-6 py-3 text-sm font-medium text-dark transition-all bg-mattblack-hover text-light-hover ">
+                <Link
+                  href={"/contact"}
+                  className="mt-8 group inline-flex items-center gap-2 rounded-full border border-gray-300 px-6 py-3 text-sm font-medium text-dark transition-all bg-mattblack-hover text-light-hover "
+                >
                   Learn More
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +135,7 @@ const DevelopmentOverview = () => {
                     <path d="M5 12h14" />
                     <path d="m12 5 7 7-7 7" />
                   </svg>
-                </button>
+                </Link>
               </div>
             </div>
           ))}

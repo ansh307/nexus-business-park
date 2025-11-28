@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
@@ -34,7 +35,7 @@ const Hero = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="">
+                <a href="/contact" className="">
                   Contact
                 </a>
               </li>
@@ -75,7 +76,10 @@ const Hero = () => {
           </p> */}
 
           <div className="mt-10">
-            <button className="group flex items-center gap-3 border rounded-full  px-8 py-3 text-base font-semibold transition-all hover:bg-white hover:text-black">
+            <Link
+              href="/contact"
+              className="group flex items-center gap-3 border border-light rounded-full  px-8 py-3 text-base font-semibold transition-all hover:bg-white hover:text-black"
+            >
               Enquire Now
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +96,7 @@ const Hero = () => {
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
 
