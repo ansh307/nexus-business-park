@@ -79,7 +79,9 @@ const FooterWithForm = () => {
               RESOURCES
             </p>
             <ul className="space-y-2 text-light/80 text-sm">
-              <li>Brochure</li>
+              <li>
+                <a href="/Nexus-Business-Park-Brochure.pdf">Brochure</a>
+              </li>
               <li>Floor Plans</li>
               <li>Construction Updates</li>
               <li>FAQs</li>

@@ -103,6 +103,10 @@
   border-color: var(--color-text-light);
 }
 
+.border-brass {
+  border-color: var(--color-accent-brass);
+}
+
 /* REGISTER LOCAL FONT VARIABLE */
 .font-interTight {
   font-family: var(--font-interTight), sans-serif;

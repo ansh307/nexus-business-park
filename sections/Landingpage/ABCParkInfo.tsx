@@ -83,7 +83,7 @@ export default function ABCParkInfo() {
 
         {/* Section Label */}
         <div className="mb-5 md:mb-10 mt-40">
-          <h2 className="text-[11px] md:text-lg font-bold uppercase tracking-[0.25em] text-muted">
+          <h2 className="text-[11px] md:text-lg font-bold uppercase tracking-[0.25em] text-light">
             Why Choose Us?
           </h2>
         </div>
@@ -106,7 +106,7 @@ export default function ABCParkInfo() {
               <div className="flex items-start gap-6">
                 {/* Diamond Icon */}
                 <div className="mt-1">
-                  <div className="w-3.5 h-3.5 md:w-4 md:h-4 border-2 border-muted rotate-45"></div>
+                  <div className="w-3.5 h-3.5 md:w-4 md:h-4 border-2 border-brass rotate-45"></div>
                 </div>
 
                 {/* ANIMATED CONTENT */}
