@@ -54,7 +54,10 @@ const AboutABCPark = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="max-w-7xl mx-auto px-6 py-20 md:py-28 ">
+    <div
+      ref={sectionRef}
+      className=" mx-auto  px-4 md:px-12 lg:px-34  py-20 md:py-28 "
+    >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start ">
         {/* LEFT SIDE — SCROLLS NATURALLY */}
         <div ref={leftRef} className="col-span-5 space-y-6 ">
