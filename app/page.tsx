@@ -19,8 +19,9 @@ import FooterWithForm from "@/sections/Landingpage/FooterWithForm";
 import LimitedOpportunity from "@/sections/Landingpage/LimitedOpportunity";
 import GSAPTestimonialCarousel from "@/sections/Landingpage/TestimonialSlide";
 import DevelopmentOverview from "@/sections/Landingpage/DevelopmentOverview";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -63,6 +64,57 @@ export default function Home() {
         },
       }
     );
+
+    // SCROLL TO TOP BUTTON LOGIC
+    const scrollBtn = document.getElementById(
+      "scrollTopBtn"
+    ) as HTMLButtonElement | null;
+    if (!scrollBtn || !hero) return;
+
+    // Ensure hidden initially via GSAP too (defensive)
+    gsap.set(scrollBtn, { autoAlpha: 0 });
+
+    // Show when hero is OUT of view, hide when hero comes back
+    const st = ScrollTrigger.create({
+      trigger: hero,
+      start: "bottom top", // when bottom of hero hits top of viewport → show
+      onEnter: () => {
+        gsap.to(scrollBtn, {
+          autoAlpha: 1,
+          duration: 0.4,
+          ease: "power2.out",
+          onStart: () => {
+            scrollBtn.style.pointerEvents = "auto";
+          },
+        });
+      },
+      onLeaveBack: () => {
+        gsap.to(scrollBtn, {
+          autoAlpha: 0,
+          duration: 0.3,
+          ease: "power2.out",
+          onComplete: () => {
+            scrollBtn.style.pointerEvents = "none";
+          },
+        });
+      },
+    });
+
+    const handleClick = () => {
+      gsap.to(window, {
+        duration: 1.2,
+        scrollTo: { y: 0 },
+        ease: "power3.inOut",
+      });
+    };
+
+    scrollBtn.addEventListener("click", handleClick);
+
+    // cleanup
+    return () => {
+      scrollBtn.removeEventListener("click", handleClick);
+      st.kill();
+    };
   }, []);
 
   return (
@@ -90,6 +142,18 @@ export default function Home() {
       {/* <LimitedOpportunity /> */}
       <GSAPTestimonialCarousel />
       <FooterWithForm />
+      {/* Scroll To Top Button */}
+      <button
+        id="scrollTopBtn"
+        className="fixed bottom-10 right-10 z-[9999] w-12 h-12 rounded-full 
+             bg-mattblack text-white 
+             flex items-center justify-center shadow-xl 
+             backdrop-blur-xl border border-white/20
+             hover:scale-110 transition-all duration-300 cursor-pointer
+             opacity-0 pointer-events-none"
+      >
+        <span className="text-2xl">↑</span>
+      </button>
     </main>
   );
 }
