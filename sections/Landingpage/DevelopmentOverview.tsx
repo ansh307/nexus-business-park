@@ -76,7 +76,7 @@ const DevelopmentOverview = () => {
               <div className="w-full lg:w-1/2">
                 <div
                   className={`overview-image relative aspect-[4/4] ${
-                    section.reverse ? "ml-18" : "mr-18"
+                    section.reverse ? "sm:ml-18" : "sm:mr-18"
                   } overflow-hidden rounded-[30px] `}
                 >
                   <Image

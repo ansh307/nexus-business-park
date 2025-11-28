@@ -23,7 +23,7 @@ const Hero = () => {
           </div>
 
           <nav>
-            <ul className="flex items-center gap-8 uppercase text-light">
+            <ul className="flex text-sm sm:text-base items-center gap-6 sm:gap-8 uppercase text-light">
               <li>
                 <a href="#" className="">
                   Home

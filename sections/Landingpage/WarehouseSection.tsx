@@ -37,7 +37,7 @@ export default function WarehouseShowcase() {
 
   return (
     <section className="md:px-12 lg:px-34 section-dark py-28">
-      <div className="mx-auto flex flex-col gap-14">
+      <div className="mx-auto flex flex-col gap-4 sm:gap-14">
         {/* Top Large Image */}
         <div
           ref={topImageRef}

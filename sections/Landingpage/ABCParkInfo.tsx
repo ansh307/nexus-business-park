@@ -82,7 +82,7 @@ export default function ABCParkInfo() {
         </div>
 
         {/* Section Label */}
-        <div className="mb-5 md:mb-10 mt-40">
+        <div className="mb-5 md:mb-10 mt-20 md:mt-40">
           <h2 className="text-[11px] md:text-lg font-bold uppercase tracking-[0.25em] text-light">
             Why Choose Us?
           </h2>
