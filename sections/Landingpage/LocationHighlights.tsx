@@ -51,9 +51,9 @@ export default function LocationHighlights() {
   return (
     <div
       ref={sectionRef}
-      className="w-full bg-ivory py-28 px-4 md:px-12 lg:px-34 relative overflow-hidden"
+      className="w-full bg-mattblack py-28 px-4 md:px-12 lg:px-34 relative overflow-hidden"
     >
-      <h1 className="text-[28px] md:text-[34px] lg:text-[38px] font-semibold text-dark leading-snug max-w-5xl card-item">
+      <h1 className="text-[28px] md:text-[34px] lg:text-[38px] font-semibold text-light leading-snug max-w-5xl card-item">
         A trusted team delivering premium industrial developments.
       </h1>
 
@@ -61,24 +61,24 @@ export default function LocationHighlights() {
         {/* Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
           {/* Developer Profile */}
-          <div className="bg-brand p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
-            <p className="text-slate text-[16px] leading-relaxed">
+          <div className="bg-card-dark p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
+            <p className="text-light text-[16px] leading-relaxed">
               Over 20+ years of experience in delivering commercial and
               industrial projects across Victoria.
             </p>
           </div>
 
           {/* Past Project Visuals / Experience */}
-          <div className="bg-brand p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
-            <p className="text-slate text-[16px] leading-relaxed">
+          <div className="bg-card-dark p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
+            <p className="text-light text-[16px] leading-relaxed">
               Proven track record with successful business parks, logistics
               hubs, and warehouse precincts.
             </p>
           </div>
 
           {/* Strengths */}
-          <div className="bg-brand p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
-            <p className="text-slate text-[16px] leading-relaxed">
+          <div className="bg-card-dark p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
+            <p className="text-light text-[16px] leading-relaxed">
               Focus on architectural quality, efficient layouts, and long-term
               investment value.
             </p>
@@ -88,16 +88,16 @@ export default function LocationHighlights() {
         {/* Bottom Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
           {/* Recognition / Team Strength */}
-          <div className="bg-brand p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start gap-4 card-item">
-            <p className="text-slate text-[16px] leading-relaxed">
+          <div className="bg-card-dark p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start gap-4 card-item">
+            <p className="text-light text-[16px] leading-relaxed">
               Recognised for consistent delivery, quality workmanship, and
               commitment to Australian industrial standards.
             </p>
           </div>
 
           {/* Additional Trust Indicator */}
-          <div className="bg-brand p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
-            <p className="text-slate text-[16px] leading-relaxed">
+          <div className="bg-card-dark p-8 rounded-3xl shadow-sm min-h-[160px] flex items-start card-item">
+            <p className="text-light text-[16px] leading-relaxed">
               Supported by a specialist project team including architects,
               engineers, and commercial property experts.
             </p>

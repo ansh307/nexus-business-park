@@ -9,10 +9,12 @@
   /* GLOBAL THEME COLORS */
   --color-bg-light: #F4F2EE;
   --color-bg-dark: #2f3237;
+  --color-bg-card-dark: #232323;
   --color-bg-mattblack: #111111;
   /* slate charcoal */
   --color-bg-ivory: #F4F2EE;
   --color-bg-brand: #E8E3D9;
+  --color-bg-muted: #A6A29A;
 
   --color-text-dark: #111111;
   --color-text-light: #F4F2EE;
@@ -51,6 +53,10 @@
   color: var(--color-text-light);
 }
 
+.text-dark-hover:hover {
+  color: var(--color-text-dark);
+}
+
 .text-muted {
   color: var(--color-text-muted);
 }
@@ -87,16 +93,32 @@
   background-color: var(--color-bg-mattblack);
 }
 
+.bg-card-dark {
+  background-color: var(--color-bg-card-dark);
+}
+
 .bg-mattblack-hover:hover {
   background-color: var(--color-bg-mattblack);
+}
+
+.bg-light-hover:hover {
+  background-color: var(--color-bg-ivory);
 }
 
 .bg-brand {
   background-color: var(--color-bg-brand);
 }
 
+.bg-muted {
+  background-color: var(--color-bg-muted);
+}
+
 .border-muted {
   border-color: var(--color-text-muted);
+}
+
+.border-muted-top {
+  border-top-color: var(--color-text-muted);
 }
 
 .border-light {

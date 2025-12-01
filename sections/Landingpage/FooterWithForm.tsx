@@ -14,7 +14,7 @@ const SocialIcon = ({ path }: { path: React.ReactNode }) => (
 
 const FooterWithForm = () => {
   return (
-    <section className="section-dark w-full py-20 md:py-28">
+    <section className="section-dark w-full py-20 md:py-28 border-t border-muted-top ">
       <div className=" mx-auto px-6 md:px-8 lg:px-34 grid grid-cols-1 md:grid-cols-12 gap-16">
         {/* LEFT COLUMN — BRAND + CONTACT + NEWSLETTER */}
         <div className="md:col-span-5 space-y-8">

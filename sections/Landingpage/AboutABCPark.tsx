@@ -61,8 +61,8 @@ const AboutABCPark = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start ">
         {/* LEFT SIDE — SCROLLS NATURALLY */}
         <div ref={leftRef} className="col-span-5 space-y-6 ">
-          <div className="bg-brand p-8 md:p-12 rounded-3xl ">
-            <h3 className="text-2xl font-semibold mb-8 text-slate expect-item">
+          <div className="bg-card-dark p-8 md:p-12 rounded-3xl ">
+            <h3 className="text-2xl font-semibold mb-8 text-light expect-item">
               What You Can Expect
             </h3>
 
@@ -84,7 +84,7 @@ const AboutABCPark = () => {
                       ></path>
                     </svg>
                   </div>
-                  <p className="text-base md:text-lg text-slate leading-relaxed">
+                  <p className="text-base md:text-lg text-light leading-relaxed">
                     {text}
                   </p>
                 </div>
@@ -96,7 +96,7 @@ const AboutABCPark = () => {
         {/* RIGHT SIDE — STICKY */}
         <div ref={rightRef} className="col-span-5 lg:sticky lg:top-28 h-fit">
           <h2 className="right-animate text-3xl md:text-4xl lg:text-5xl font-light mb-8 text-light tracking-tight leading-tight">
-            About <span className="font-semibold">Nexus Business Park</span>
+            <span className="font-semibold">Nexus Business Park</span>
           </h2>
 
           <div className="space-y-6 text-lg text-muted leading-relaxed">

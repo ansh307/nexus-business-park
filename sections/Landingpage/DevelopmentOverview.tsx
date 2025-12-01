@@ -55,11 +55,11 @@ const DevelopmentOverview = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-ivory py-20 md:py-28 ">
+    <section ref={sectionRef} className="w-full bg-mattblack py-20 md:py-28 ">
       <div className="w-full mx-auto px-6 md:px-12 lg:px-34">
         {/* Section Heading */}
         <div className="mb-16 md:mb-24">
-          <h2 className="text-[11px] md:text-lg font-bold uppercase tracking-[0.25em] text-slate">
+          <h2 className="text-[11px] md:text-lg font-bold uppercase tracking-[0.25em] text-light">
             Development Overview
           </h2>
         </div>
@@ -95,7 +95,7 @@ const DevelopmentOverview = () => {
                   section.reverse ? "mr-auto" : "ml-auto"
                 }`}
               >
-                <h3 className="text-animate text-2xl md:text-3xl lg:text-4xl font-light text-dark mb-6 leading-tight">
+                <h3 className="text-animate text-2xl md:text-3xl lg:text-4xl font-light text-light mb-6 leading-tight">
                   {section.title.split("—").map((part, i) => (
                     <span key={i}>
                       {i === 1 ? (
@@ -111,13 +111,13 @@ const DevelopmentOverview = () => {
                   ))}
                 </h3>
 
-                <p className="text-animate text-slate text-base md:text-lg leading-relaxed mb-8">
+                <p className="text-animate text-muted text-base md:text-lg leading-relaxed mb-8">
                   {section.description}
                 </p>
 
                 <Link
                   href={"/contact"}
-                  className="mt-8 group inline-flex items-center gap-2 rounded-full border border-gray-300 px-6 py-3 text-sm font-medium text-dark transition-all bg-mattblack-hover text-light-hover "
+                  className="mt-8 group inline-flex items-center gap-2 rounded-full border border-gray-300 px-6 py-3 text-sm font-medium text-light transition-all bg-light-hover text-dark-hover "
                 >
                   Learn More
                   <svg

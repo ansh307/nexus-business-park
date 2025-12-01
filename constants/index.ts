@@ -68,7 +68,7 @@ export const testimonialsData = [
   {
     id: 1,
     quote:
-      "With a scarcity of industrial options in the area, **this exclusive development places your business at the centre of Officer South's booming future.**",
+      "With a scarcity of industrial options in the area, this exclusive development places your business at the centre of Officer South's booming future.",
     name: "JOSHUA COLOSIMO",
     title: "Associate | Aston Commercial",
     profileImg: "/feature-image.png",
@@ -100,7 +100,7 @@ export const developmentOverviewSections = [
     title: "Masterplanned for — efficiency & flow",
     description:
       "Nexus Business Park is designed with a clear, functional layout—featuring streamlined vehicle access, spacious loading zones, and well-positioned offices to support a wide range of business operations.",
-    image: "/3.jpg", // Using placeholder, user can update
+    image: "/7.png", // Using placeholder, user can update
     imageAlt: "Modern glass building facade",
     reverse: false,
   },
@@ -109,7 +109,7 @@ export const developmentOverviewSections = [
     title: "Thoughtfully landscaped — clarity & balance",
     description:
       "The development incorporates structured landscaping with canopy trees, pathways, and green buffers—enhancing visual appeal while supporting a clean, professional environment for businesses.",
-    image: "/2.jpg", // Using placeholder
+    image: "/8.png", // Using placeholder
     imageAlt: "Landscaped business park environment",
     reverse: true,
   },
@@ -118,7 +118,7 @@ export const developmentOverviewSections = [
     title: "Architectural excellence — refined façades",
     description:
       "Clean lines, high-quality materials, and professional façade elements define the character of the warehouses—balancing function with a strong architectural presence.",
-    image: "/5.png", // Using placeholder
+    image: "/9.png", // Using placeholder
     imageAlt: "Architectural details of warehouse",
     reverse: false,
   },

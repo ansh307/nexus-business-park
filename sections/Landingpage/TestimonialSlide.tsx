@@ -33,7 +33,7 @@ const TestimonialSlide = ({
   return (
     <div className="w-full flex flex-col justify-center gap-8 md:min-h-[40vh] lg:min-h-[60vh] ">
       {/* Quote */}
-      <div className="relative text-[#0D1B2A] px-2 sm:px-4">
+      <div className="relative text-light px-2 sm:px-4">
         <span className="absolute -top-6 left-0 text-5xl sm:text-6xl md:text-7xl font-extrabold opacity-30">
           “
         </span>
@@ -60,12 +60,10 @@ const TestimonialSlide = ({
         </div>
 
         <div>
-          <p className="text-sm sm:text-base md:text-lg font-bold uppercase tracking-wide text-[#0D1B2A]">
+          <p className="text-sm sm:text-base md:text-lg font-bold uppercase tracking-wide text-muted">
             {name}
           </p>
-          <p className="text-xs sm:text-sm md:text-base text-[#374151]">
-            {title}
-          </p>
+          <p className="text-xs sm:text-sm md:text-base text-muted">{title}</p>
         </div>
       </div>
     </div>
@@ -96,7 +94,7 @@ const GSAPTestimonialCarousel = () => {
   }, [activeIndex]);
 
   return (
-    <div className="w-full py-16 bg-ivory">
+    <div className="w-full py-16 bg-mattblack">
       <div className=" mx-auto px-6 md:px-12 lg:px-34">
         <div className=" mx-auto">
           {/* Slides */}
@@ -127,8 +125,8 @@ const GSAPTestimonialCarousel = () => {
                 className={`h-2 rounded-full transition-all duration-300 
                 ${
                   index === activeIndex
-                    ? "w-8 bg-mattblack"
-                    : "w-2 bg-transparent border border-[#0D1B2A]"
+                    ? "w-8 bg-light"
+                    : "w-2 bg-transparent border border-light"
                 }
               `}
               />

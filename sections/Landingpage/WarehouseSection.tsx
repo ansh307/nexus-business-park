@@ -57,13 +57,13 @@ export default function WarehouseShowcase() {
         {/* Bottom Section */}
         <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 md:gap-8">
           {/* Left Text Box */}
-          <div className="rounded-[32px] bg-brand p-10 min-h-[200px] sm:min-h-[260px] md:min-h-[420px] shadow-md flex flex-col justify-between">
+          <div className="rounded-[32px] bg-card-dark p-10 min-h-[200px] sm:min-h-[260px] md:min-h-[420px] shadow-md flex flex-col justify-between">
             <div>
-              <h3 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-slate leading-tight">
+              <h3 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-light leading-tight">
                 Download Brochure
               </h3>
 
-              <p className="text-slate mt-4 max-w-md">
+              <p className="text-light mt-4 max-w-md">
                 Get the complete Nexus Business Park brochure with detailed
                 plans, specifications, amenities, and investment opportunities.
               </p>
