@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -16,51 +17,8 @@ const Hero = () => {
 
       <div className="absolute inset-0 z-0 bg-black/15 rounded-b-[80px] " />
 
+      <Navbar />
       <div className="relative z-10 flex h-full flex-col px-6 md:px-12 lg:px-24  ">
-        <header className="flex w-full items-center justify-between py-6 md:py-8">
-          <div className="text-xl font-light tracking-wide md:text-2xl uppercase">
-            Nexus
-          </div>
-
-          <nav>
-            <ul className="flex text-sm sm:text-base items-center gap-6 sm:gap-8 uppercase text-light">
-              <li>
-                <a href="#" className="">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </nav>
-          {/* <button className="group flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-8 py-3 text-sm font-medium backdrop-blur-sm transition-all hover:bg-white/20 hover:border-white/50">
-            Contact Us
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="transition-transform group-hover:translate-x-1"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
-          </button> */}
-        </header>
-
         {/* Main Content */}
         <div className="flex flex-1 flex-col items-center justify-center text-center  pb-20 px-10 ">
           <h1 className="max-w-4xl text-5xl font-bold font-interTight-700 leading-tight tracking-tight md:text-6xl lg:text-7xl ">

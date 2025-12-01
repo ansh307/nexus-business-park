@@ -141,7 +141,7 @@ export default function Home() {
       <WarehouseShowcase />
       {/* <LimitedOpportunity /> */}
       <GSAPTestimonialCarousel />
-      <FooterWithForm />
+
       {/* Scroll To Top Button */}
       <button
         id="scrollTopBtn"
