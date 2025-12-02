@@ -33,7 +33,7 @@ const TestimonialSlide = ({
   return (
     <div
       id="testimonials-section"
-      className="w-full flex flex-col justify-center gap-8 md:min-h-[40vh] lg:min-h-[60vh] "
+      className="w-full flex flex-col justify-center gap-8 md:min-h-[40vh] lg:min-h-[35vh] "
     >
       {/* Quote */}
       <div className="relative text-light px-2 sm:px-4">
@@ -97,7 +97,7 @@ const GSAPTestimonialCarousel = () => {
   }, [activeIndex]);
 
   return (
-    <div className="w-full py-16 bg-mattblack">
+    <div className="w-full py-24 bg-mattblack">
       <div className=" mx-auto px-6 md:px-12 lg:px-34">
         <div className=" mx-auto">
           {/* Slides */}

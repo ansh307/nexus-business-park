@@ -1,73 +1,52 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+gsap.registerPlugin(ScrollToPlugin);
 
 export default function ScrollToTopButton() {
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
-    const btn = document.getElementById("scrollTopBtn") as HTMLButtonElement;
-
-    if (!btn) return;
-
-    // Start hidden
-    gsap.set(btn, { autoAlpha: 0, pointerEvents: "none" });
-
-    // Show when user scrolls down
-    const trigger = ScrollTrigger.create({
-      start: "top+=300 top", // show after 300px scroll
-      onEnter: () => {
-        gsap.to(btn, {
-          autoAlpha: 1,
-          duration: 0.4,
-          ease: "power2.out",
-          onStart: () => {
-            btn.style.pointerEvents = "auto";
-          },
-        });
-      },
-      onLeaveBack: () => {
-        gsap.to(btn, {
-          autoAlpha: 0,
-          duration: 0.3,
-          ease: "power2.out",
-          onComplete: () => {
-            btn.style.pointerEvents = "none";
-          },
-        });
-      },
-    });
-
-    // Scroll to top on click
-    const handleClick = () => {
-      gsap.to(window, {
-        duration: 1.2,
-        scrollTo: { y: 0 },
-        ease: "power3.inOut",
-      });
+    const handleScroll = () => {
+      const y = window.scrollY || window.pageYOffset;
+      setIsVisible(y > 300); // show after 300px
     };
 
-    btn.addEventListener("click", handleClick);
+    // Run once on mount
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      btn.removeEventListener("click", handleClick);
-      trigger.kill();
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  const handleClick = () => {
+    gsap.to(window, {
+      duration: 1.2,
+      scrollTo: { y: 0 },
+      ease: "power3.inOut",
+    });
+  };
+
   return (
     <button
-      id="scrollTopBtn"
-      className="
+      onClick={handleClick}
+      className={`
         fixed bottom-10 right-10 z-[9999] w-12 h-12 rounded-full
         bg-mattblack text-white flex items-center justify-center
         shadow-xl backdrop-blur-xl border border-white/20
         hover:scale-110 transition-all duration-300 cursor-pointer
-        opacity-0 pointer-events-none
-      "
+        ${
+          isVisible
+            ? "opacity-100 pointer-events-auto translate-y-0"
+            : "opacity-0 pointer-events-none translate-y-4"
+        }
+      `}
     >
       <span className="text-2xl">↑</span>
     </button>
