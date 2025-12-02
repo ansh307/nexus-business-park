@@ -1,13 +1,71 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 const ContactPage = () => {
+  const wrapperRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Header section (Fade + slight drop)
+      gsap.fromTo(
+        ".contact-header",
+        {
+          x: -40,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1.2,
+          ease: "power3.out",
+        }
+      );
+
+      // Back button (drops in)
+      gsap.fromTo(
+        ".contact-back-btn",
+        {
+          x: -40,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1.2,
+          delay: 0.1,
+          ease: "power3.out",
+        }
+      );
+
+      // Left-side cards sliding from the left
+      gsap.fromTo(
+        ".contact-cards-wrapper > div",
+        {
+          x: -120,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1.3,
+          stagger: 0.2,
+          delay: 0.3,
+          ease: "power4.out",
+        }
+      );
+    }, wrapperRef);
+
+    return () => ctx.revert();
+  }, []);
   return (
-    <section className="section-dark w-full py-20 md:py-28">
+    <section ref={wrapperRef} className="section-dark w-full py-20 md:py-28">
       <div className="flex lg:flex-row flex-col gap-10 lg:gap-0 justify-between mx-auto px-6 md:px-8 lg:px-34">
-        <div className="order-2 lg:order-1 space-y-6 ">
+        <div className="order-2 lg:order-1 space-y-6 contact-header opacity-0">
           {/* Brand Name */}
-          <h2 className="text-light text-3xl md:text-4xl font-light tracking-wider">
+          <h2 className="text-5xl font-semibold tracking-tight text-light  md:text-4xl ">
             NEXUS BUSINESS PARK
           </h2>
 
@@ -25,7 +83,7 @@ const ContactPage = () => {
         </div>
 
         {/* back button */}
-        <div className="order-1 lg:order-2 h-fit flex  justify-end">
+        <div className="order-1 lg:order-2 h-fit flex  justify-end ">
           <Link
             href="/"
             className="inline-flex items-center justify-end gap-2 bg-[#1a1a1a] text-light px-5 py-3 rounded-full text-sm hover:bg-light hover:text-dark transition-all w-fit"
@@ -49,11 +107,13 @@ const ContactPage = () => {
           </Link>
         </div>
       </div>
+
+      {/* CONTACT FORM & DETAILS */}
       <div className="mx-auto px-6 md:px-8 lg:px-34 grid grid-cols-1 md:grid-cols-12 gap-16 mt-16 ">
         {/* LEFT COLUMN */}
-        <div className="md:col-span-5 space-y-10">
+        <div className="md:col-span-5 space-y-10 ">
           {/* SALE CONTACT CARDS */}
-          <div className="space-y-4">
+          <div className="space-y-4 contact-cards-wrapper ">
             <div className="bg-[#1a1a1a] p-5 rounded-xl text-light space-y-2">
               <p className="font-semibold text-lg">Nexus Business Park Sales</p>
               <img
@@ -187,27 +247,6 @@ const ContactPage = () => {
               Enquire Now
             </button>
           </div>
-        </div>
-      </div>
-
-      {/* FOOTER BOTTOM */}
-      <div className="mx-auto px-6 md:px-8 lg:px-34 mt-16 flex flex-col md:flex-row justify-between items-center gap-8">
-        <p className="text-light/60 text-xs">
-          © 2025 Nexus Business Park · All Rights Reserved
-        </p>
-
-        <div className="flex items-center gap-6 text-light">
-          <a href="#" className="hover:text-accent-brass transition">
-            <i className="fa-brands fa-instagram text-xl"></i>
-          </a>
-
-          <a href="#" className="hover:text-accent-brass transition">
-            <i className="fa-brands fa-facebook text-xl"></i>
-          </a>
-
-          <a href="#" className="hover:text-accent-brass transition">
-            <i className="fa-brands fa-linkedin text-xl"></i>
-          </a>
         </div>
       </div>
     </section>

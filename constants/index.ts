@@ -71,15 +71,15 @@ export const testimonialsData = [
       "With a scarcity of industrial options in the area, this exclusive development places your business at the centre of Officer South's booming future.",
     name: "JOSHUA COLOSIMO",
     title: "Associate | Aston Commercial",
-    profileImg: "/feature-image.png",
+    profileImg: "/sale-1.png",
   },
   {
     id: 2,
     quote:
       "A rare chance to secure your place in a high-demand precinct, offering unmatched accessibility and future growth potential.",
-    name: "SARAH CONNOR",
-    title: "Industrial Property Specialist",
-    profileImg: "/feature-image.png",
+    name: "Tim CONNOR",
+    title: "CVA Director – Southern Region",
+    profileImg: "/sale-2.png",
   },
 ];
 
@@ -171,4 +171,103 @@ export const AboutExpectations = [
   "Secure, low-maintenance design",
   "Move-in-ready by late 2025",
   "Only 17 units — limited supply, increasing long-term value",
+];
+
+export const warehouseData = [
+  {
+    id: 1,
+    wh: 387.2,
+    office: 102.3,
+    imagePath: "/warehouses/wh1.png",
+    description:
+      "A spacious industrial warehouse with a generous office space, ideal for medium-scale operations and expanding logistics teams.",
+  },
+  {
+    id: 2,
+    wh: 179.0,
+    office: 75.8,
+    imagePath: "/warehouses/wh12.png",
+    description:
+      "A compact, efficient warehouse designed for startups, local distributors, and businesses needing secure, modern storage.",
+  },
+  {
+    id: 3,
+    wh: 227.7,
+    office: 75.8,
+    imagePath: "/warehouses/wh5-4-6.png",
+    description:
+      "Balanced warehouse and office proportions make this unit perfect for growing businesses seeking practicality and style.",
+  },
+  {
+    id: 4,
+    wh: 227.7,
+    office: 75.8,
+    imagePath: "/warehouses/wh1-2-3.png",
+    description:
+      "A versatile warehouse designed for flexible workflows, offering excellent clearance and a refined upper-level office.",
+  },
+  {
+    id: 5,
+    wh: 179.0,
+    office: 75.8,
+    imagePath: "/warehouses/wh6-7.png",
+    description:
+      "An efficient warehouse unit ideal for smaller teams, e-commerce operations, or local distribution hubs.",
+  },
+  {
+    id: 6,
+    wh: 254.9,
+    office: 95.7,
+    imagePath: "/warehouses/wh-10-11-12.png",
+    description:
+      "A premium mid-sized warehouse offering a strong mix of storage capacity and a bright, modern office space.",
+  },
+  {
+    id: 7,
+    wh: 254.9,
+    office: 95.7,
+    imagePath: "/warehouses/wh-7-8-9.png",
+    description:
+      "Designed for operational efficiency, this warehouse features excellent floor space paired with a functional upper office.",
+  },
+  {
+    id: 8,
+    wh: 179.0,
+    office: 75.8,
+    imagePath: "/8.png",
+    description:
+      "A modern compact warehouse well-suited for boutique businesses, light manufacturing, or specialised storage needs.",
+  },
+  {
+    id: 9,
+    wh: 227.7,
+    office: 75.8,
+    imagePath: "/9.png",
+    description:
+      "A balanced warehouse-and-office configuration built for businesses seeking usable floor area and contemporary design.",
+  },
+  {
+    id: 10,
+    wh: 227.7,
+    office: 75.8,
+    imagePath: "/10.png",
+    description:
+      "Featuring strong accessibility and clean architectural lines, this unit is ideal for streamlined operations and client-facing teams.",
+  },
+  {
+    id: 11,
+    wh: 179.0,
+    office: 75.8,
+    imagePath: "/7.png",
+    description:
+      "A flexible, compact warehouse with a well-proportioned office space, perfect for small-scale logistics or specialist suppliers.",
+  },
+  {
+    id: 12,
+    wh: 387.2,
+    office: 102.3,
+    imagePath: "/8.png",
+    description:
+      "A flagship large-format warehouse offering maximum storage capacity, impressive frontage, and a highly functional office.",
+  },
 ];

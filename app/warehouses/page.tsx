@@ -1,111 +1,50 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
-const warehouseData = [
-  {
-    id: 1,
-    wh: 387.2,
-    office: 102.3,
-    imagePath: "/warehouses/wh1.png",
-    description:
-      "A spacious industrial warehouse with a generous office space, ideal for medium-scale operations and expanding logistics teams.",
-  },
-  {
-    id: 2,
-    wh: 179.0,
-    office: 75.8,
-    imagePath: "/warehouses/wh12.png",
-    description:
-      "A compact, efficient warehouse designed for startups, local distributors, and businesses needing secure, modern storage.",
-  },
-  {
-    id: 3,
-    wh: 227.7,
-    office: 75.8,
-    imagePath: "/warehouses/wh5-4-6.png",
-    description:
-      "Balanced warehouse and office proportions make this unit perfect for growing businesses seeking practicality and style.",
-  },
-  {
-    id: 4,
-    wh: 227.7,
-    office: 75.8,
-    imagePath: "/warehouses/wh1-2-3.png",
-    description:
-      "A versatile warehouse designed for flexible workflows, offering excellent clearance and a refined upper-level office.",
-  },
-  {
-    id: 5,
-    wh: 179.0,
-    office: 75.8,
-    imagePath: "/warehouses/wh6-7.png",
-    description:
-      "An efficient warehouse unit ideal for smaller teams, e-commerce operations, or local distribution hubs.",
-  },
-  {
-    id: 6,
-    wh: 254.9,
-    office: 95.7,
-    imagePath: "/warehouses/wh-10-11-12.png",
-    description:
-      "A premium mid-sized warehouse offering a strong mix of storage capacity and a bright, modern office space.",
-  },
-  {
-    id: 7,
-    wh: 254.9,
-    office: 95.7,
-    imagePath: "/warehouses/wh-7-8-9.png",
-    description:
-      "Designed for operational efficiency, this warehouse features excellent floor space paired with a functional upper office.",
-  },
-  {
-    id: 8,
-    wh: 179.0,
-    office: 75.8,
-    imagePath: "/8.png",
-    description:
-      "A modern compact warehouse well-suited for boutique businesses, light manufacturing, or specialised storage needs.",
-  },
-  {
-    id: 9,
-    wh: 227.7,
-    office: 75.8,
-    imagePath: "/9.png",
-    description:
-      "A balanced warehouse-and-office configuration built for businesses seeking usable floor area and contemporary design.",
-  },
-  {
-    id: 10,
-    wh: 227.7,
-    office: 75.8,
-    imagePath: "/10.png",
-    description:
-      "Featuring strong accessibility and clean architectural lines, this unit is ideal for streamlined operations and client-facing teams.",
-  },
-  {
-    id: 11,
-    wh: 179.0,
-    office: 75.8,
-    imagePath: "/7.png",
-    description:
-      "A flexible, compact warehouse with a well-proportioned office space, perfect for small-scale logistics or specialist suppliers.",
-  },
-  {
-    id: 12,
-    wh: 387.2,
-    office: 102.3,
-    imagePath: "/8.png",
-    description:
-      "A flagship large-format warehouse offering maximum storage capacity, impressive frontage, and a highly functional office.",
-  },
-];
+import { warehouseData } from "@/constants";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function WarehousesPage() {
+  const pageRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // HEADER fade + slight rise
+      gsap.from(".warehouses-header", {
+        y: 40,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+      });
+
+      // EACH warehouse block reveals on scroll
+      gsap.utils.toArray(".overview-block").forEach((block: any) => {
+        gsap.from(block, {
+          y: 60,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: block,
+            start: "top 85%",
+          },
+        });
+      });
+    }, pageRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="min-h-screen w-full bg-mattblack text-light">
-      <main className=" mx-auto px-6 md:px-12 lg:px-34 py-16 space-y-36">
+    <div ref={pageRef} className="min-h-screen w-full bg-mattblack text-light">
+      <main className=" mx-auto px-6 md:px-12 lg:px-34 py-16 lg:py-28 space-y-36">
         {/* HEADER */}
-        <section className="flex lg:flex-row flex-col gap-10 lg:gap-0 justify-between ">
+        <section className="flex lg:flex-row flex-col gap-10 lg:gap-0 justify-between warehouses-header">
           <div className="order-2 lg:order-1 space-y-6 ">
             <p className="text-muted font-medium uppercase tracking-[0.25em] text-sm">
               Officer South · Industrial Precinct
@@ -165,7 +104,9 @@ export default function WarehousesPage() {
             return (
               <div
                 key={item.id}
-                className={`overview-block flex flex-col ${
+                className={`${
+                  index === 0 ? "" : "overview-block"
+                } flex flex-col ${
                   isReversed ? "lg:flex-row-reverse" : "lg:flex-row"
                 } gap-10 md:gap-16 lg:gap-24`}
               >
