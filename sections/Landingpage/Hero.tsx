@@ -13,7 +13,7 @@ const Hero = () => {
       gsap.fromTo(
         ".hero-title",
         {
-          y: 80,
+          y: 50,
           opacity: 0,
         },
         {
@@ -78,14 +78,14 @@ const Hero = () => {
       <div className="relative z-10 flex h-full flex-col px-6 md:px-12 lg:px-24  ">
         {/* Main Content */}
         <div className="flex flex-1 flex-col items-center justify-center text-center  pb-20 px-10 ">
-          <div className="leading-tight max-w-4xl   overflow-hidden">
-            <h1 className="hero-title max-w-4xl text-5xl font-bold font-interTight-700  tracking-tight md:text-6xl lg:text-7xl opacity-0">
-              Warehouse Architecture
-            </h1>
+          <div className="text-center space-y-3 overflow-hidden">
+            <p className=" hero-title uppercase font-medium tracking-[0.25em] text-white/90 text-sm opacity-0">
+              Premium Industrial Design
+            </p>
           </div>
-          <div className="leading-tight max-w-4xl overflow-hidden">
-            <h1 className="hero-nexus text-5xl md:text-6xl lg:text-[100px] font-bold font-interTight-700  tracking-wide  opacity-0">
-              NEXUS
+          <div className=" text-center space-y-3 overflow-hidden">
+            <h1 className="hero-nexus text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight opacity-0">
+              Nexus Warehouse Architecture
             </h1>
           </div>
 
