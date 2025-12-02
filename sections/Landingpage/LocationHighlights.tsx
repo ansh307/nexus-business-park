@@ -60,6 +60,7 @@ export default function LocationHighlights() {
 
   return (
     <div
+      id="developer-section"
       ref={sectionRef}
       className="w-full bg-mattblack py-28 px-4 md:px-12 lg:px-34 relative overflow-hidden"
     >

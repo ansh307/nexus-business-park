@@ -1,5 +1,6 @@
 "use client";
-import { footerLinks } from "@/constants";
+import { footerLinks, scrollTargets } from "@/constants";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
 const SocialIcon = ({ path }: { path: React.ReactNode }) => (
@@ -11,8 +12,29 @@ const SocialIcon = ({ path }: { path: React.ReactNode }) => (
     {path}
   </svg>
 );
+type NavTarget = {
+  id?: string;
+  page?: string;
+};
 
 const FooterWithForm = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const scrollOrNavigate = (id?: string, targetPage: string = "/") => {
+    if (id && pathname === targetPage) {
+      const el = document.getElementById(id);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+      }
+      return;
+    }
+
+    if (id) localStorage.setItem("scrollTo", id);
+    router.push(targetPage);
+  };
+
   return (
     <section className="section-dark w-full py-20 md:py-28 border-t border-muted-top ">
       <div className=" mx-auto px-6 md:px-8 lg:px-34 grid grid-cols-1 md:grid-cols-12 gap-16">
@@ -30,7 +52,7 @@ const FooterWithForm = () => {
           </div>
 
           {/* Newsletter */}
-          <div className="pt-6 space-y-4">
+          <div className="pt-6 space-y-4 max-w-md">
             <p className="text-light text-sm md:text-base">
               Subscribe to our Newsletter
             </p>
@@ -60,47 +82,35 @@ const FooterWithForm = () => {
           </div>
         </div>
 
-        {/* RIGHT — NAVIGATION */}
         <div className="md:col-span-5 md:col-start-7 grid grid-cols-2 md:grid-cols-3 gap-10">
-          <div className="space-y-3">
-            <p className="text-light font-semibold text-sm tracking-wide">
-              PROJECT
-            </p>
-            <ul className="space-y-2 text-light/80 text-sm">
-              <li>Overview</li>
-              <li>Warehouses</li>
-              <li>Location</li>
-              <li>Amenities</li>
-            </ul>
-          </div>
+          {footerLinks.map((group, index) => (
+            <div className="space-y-4" key={index}>
+              <p className="text-light font-semibold text-sm tracking-wide">
+                {group.title}
+              </p>
 
-          <div className="space-y-3">
-            <p className="text-light font-semibold text-sm tracking-wide">
-              RESOURCES
-            </p>
-            <ul className="space-y-2 text-light/80 text-sm">
-              <li>
-                <a href="/Nexus-Business-Park-Brochure.pdf">Brochure</a>
-              </li>
-              <li>Floor Plans</li>
-              <li>Construction Updates</li>
-              <li>FAQs</li>
-            </ul>
-          </div>
+              <ul className="space-y-2 text-light/80 text-sm">
+                {group.links.map((item, i) => {
+                  const target: NavTarget = scrollTargets[item] ?? {
+                    page: "/",
+                  };
 
-          <div className="space-y-3">
-            <p className="text-light font-semibold text-sm tracking-wide">
-              COMPANY
-            </p>
-            <ul className="space-y-2 text-light/80 text-sm">
-              <li>Developer</li>
-              <li>
-                <a href="/contact">Contact</a>
-              </li>
-              <li>Privacy Policy</li>
-              <li>Disclaimer</li>
-            </ul>
-          </div>
+                  return (
+                    <li key={i}>
+                      <button
+                        onClick={() =>
+                          scrollOrNavigate(target.id, target.page || "/")
+                        }
+                        className="text-left hover:text-light transition cursor-pointer"
+                      >
+                        {item}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -113,19 +123,12 @@ const FooterWithForm = () => {
 
         {/* Social Icons */}
         <div className="flex items-center gap-6 text-light">
-          <p className="text-light/70 text-sm">Connect with us</p>
-
-          <a href="#" className="hover:text-accent-brass transition">
-            <i className="fa-brands fa-instagram text-xl"></i>
-          </a>
-
-          <a href="#" className="hover:text-accent-brass transition">
-            <i className="fa-brands fa-facebook text-xl"></i>
-          </a>
-
-          <a href="#" className="hover:text-accent-brass transition">
-            <i className="fa-brands fa-linkedin text-xl"></i>
-          </a>
+          <button
+            onClick={() => router.push("/contact")}
+            className="text-light/70 text-sm cursor-pointer"
+          >
+            Connect with us
+          </button>
         </div>
       </div>
     </section>

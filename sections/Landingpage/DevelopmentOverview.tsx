@@ -55,7 +55,11 @@ const DevelopmentOverview = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-mattblack py-20 md:py-28 ">
+    <section
+      id="overview-section"
+      ref={sectionRef}
+      className="w-full bg-mattblack py-20 md:py-28 "
+    >
       <div className="w-full mx-auto px-6 md:px-12 lg:px-34">
         {/* Section Heading */}
         <div className="mb-16 md:mb-24">

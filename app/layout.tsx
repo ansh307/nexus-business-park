@@ -6,6 +6,7 @@ import { ReactLenis } from "@/utils/lenis";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import FooterWithForm from "@/sections/Landingpage/FooterWithForm";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,6 +67,7 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable}  ${interTight.variable} ${interBody.variable}  antialiased`}
         >
           {children}
+          <ScrollToTopButton />
           <FooterWithForm />
         </body>
       </ReactLenis>

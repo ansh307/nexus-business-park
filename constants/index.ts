@@ -124,39 +124,36 @@ export const developmentOverviewSections = [
   },
 ];
 
-// FooterWithForm Data
 export const footerLinks = [
   {
-    title: "Buying & Selling",
-    links: [
-      "Properties For Sale",
-      "Commercial Listings",
-      "Recently Sold",
-      "Find an Agent",
-      "Local Suburb Reports",
-      "Get a Property Report",
-    ],
+    title: "PROJECT",
+    links: ["Overview", "Warehouses", "Location"],
   },
   {
-    title: "Landlords & Tenants",
-    links: [
-      "Manage My Property",
-      "Property Health Check",
-      "For Rent",
-      "Apply For A Property",
-      "Leased Properties",
-      "Tenant Resources",
-    ],
+    title: "RESOURCES",
+    links: ["Brochure", "Floor Plans", "Testimonials"],
   },
   {
-    title: "News & Resources",
-    links: ["FAQ", "Latest Articles", "Owners Portal", "Suburb Report"],
-  },
-  {
-    title: "Image Property",
-    links: ["Office Locations", "Meet The Team", "Contact Us"],
+    title: "COMPANY",
+    links: ["Developer", "Contact", "Privacy Policy", "Disclaimer"],
   },
 ];
+
+export const scrollTargets: Record<string, { id?: string; page?: string }> = {
+  Overview: { id: "overview-section", page: "/" },
+  Warehouses: { page: "/warehouses" },
+  Location: { id: "location-section", page: "/" },
+
+  Brochure: { id: "brochure-section", page: "/" },
+  "Floor Plans": { id: "#", page: "/" },
+
+  Testimonials: { id: "testimonials-section", page: "/" },
+
+  Developer: { id: "developer-section", page: "/" },
+  Contact: { page: "/contact" },
+  "Privacy Policy": { page: "#" },
+  Disclaimer: { page: "#" },
+};
 
 // LocationHighlights Data
 export const locationHighlightsData = [
@@ -165,4 +162,13 @@ export const locationHighlightsData = [
   { text: "Surrounded by major growth & development" },
   { text: "Future connectivity via Thompsons Road extension", icon: "◇" },
   { text: "Close to essential local amenities" },
+];
+
+export const AboutExpectations = [
+  "Architecturally designed, modern warehouse spaces",
+  "High-clearance interiors suitable for multiple industries",
+  "Excellent truck and vehicle access",
+  "Secure, low-maintenance design",
+  "Move-in-ready by late 2025",
+  "Only 17 units — limited supply, increasing long-term value",
 ];

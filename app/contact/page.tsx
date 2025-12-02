@@ -4,9 +4,8 @@ import React from "react";
 const ContactPage = () => {
   return (
     <section className="section-dark w-full py-20 md:py-28">
-      <div className="mx-auto px-6 md:px-8 lg:px-34 grid grid-cols-1 md:grid-cols-12 gap-16">
-        {/* LEFT COLUMN */}
-        <div className="md:col-span-5 space-y-10">
+      <div className="flex lg:flex-row flex-col gap-10 lg:gap-0 justify-between mx-auto px-6 md:px-8 lg:px-34">
+        <div className="order-2 lg:order-1 space-y-6 ">
           {/* Brand Name */}
           <h2 className="text-light text-3xl md:text-4xl font-light tracking-wider">
             NEXUS BUSINESS PARK
@@ -23,7 +22,36 @@ const ContactPage = () => {
             <p className="font-semibold text-light">Physical Address:</p>
             <p>Officer South</p>
           </div>
+        </div>
 
+        {/* back button */}
+        <div className="order-1 lg:order-2 h-fit flex  justify-end">
+          <Link
+            href="/"
+            className="inline-flex items-center justify-end gap-2 bg-[#1a1a1a] text-light px-5 py-3 rounded-full text-sm hover:bg-light hover:text-dark transition-all w-fit"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="transition-transform group-hover:translate-x-1 rotate-180"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+            Back to Home
+          </Link>
+        </div>
+      </div>
+      <div className="mx-auto px-6 md:px-8 lg:px-34 grid grid-cols-1 md:grid-cols-12 gap-16 mt-16 ">
+        {/* LEFT COLUMN */}
+        <div className="md:col-span-5 space-y-10">
           {/* SALE CONTACT CARDS */}
           <div className="space-y-4">
             <div className="bg-[#1a1a1a] p-5 rounded-xl text-light space-y-2">
@@ -66,36 +94,11 @@ const ContactPage = () => {
 
         {/* RIGHT SIDE FORM */}
         <div className="md:col-span-7 space-y-8">
-          {/* Back Button */}
-          <div className="flex w-full justify-end">
-            <Link
-              href="/"
-              className="inline-flex items-center justify-end gap-2 bg-[#1a1a1a] text-light px-5 py-3 rounded-full text-sm hover:bg-light hover:text-dark transition-all w-fit"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="transition-transform group-hover:translate-x-1 rotate-180"
-              >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-              Back to Home
-            </Link>
-          </div>
-
           {/* <p className="text-light  text-lg md:text-xl font-medium  mt-40">
             Make an Enquiry
           </p> */}
 
-          <div className="space-y-10 mt-54">
+          <div className="space-y-10 ">
             {/* First Name */}
             <div>
               <label className="text-light text-sm">First Name *</label>

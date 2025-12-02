@@ -55,7 +55,10 @@ export default function WarehouseShowcase() {
         </div>
 
         {/* Bottom Section */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 md:gap-8">
+        <div
+          id="brochure-section"
+          className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 md:gap-8"
+        >
           {/* Left Text Box */}
           <div className="rounded-[32px] bg-card-dark p-10 min-h-[200px] sm:min-h-[260px] md:min-h-[420px] shadow-md flex flex-col justify-between">
             <div>

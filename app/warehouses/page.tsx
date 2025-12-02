@@ -105,8 +105,8 @@ export default function WarehousesPage() {
     <div className="min-h-screen w-full bg-mattblack text-light">
       <main className=" mx-auto px-6 md:px-12 lg:px-34 py-16 space-y-36">
         {/* HEADER */}
-        <section className="flex justify-between">
-          <div className="space-y-6 ">
+        <section className="flex lg:flex-row flex-col gap-10 lg:gap-0 justify-between ">
+          <div className="order-2 lg:order-1 space-y-6 ">
             <p className="text-muted font-medium uppercase tracking-[0.25em] text-sm">
               Officer South · Industrial Precinct
             </p>
@@ -131,7 +131,7 @@ export default function WarehousesPage() {
           </div>
 
           {/* back button */}
-          <div className="h-fit flex mt-10 justify-end">
+          <div className="order-1 lg:order-2 h-fit flex  justify-end">
             <Link
               href="/"
               className="inline-flex items-center justify-end gap-2 bg-[#1a1a1a] text-light px-5 py-3 rounded-full text-sm hover:bg-light hover:text-dark transition-all w-fit"
@@ -213,18 +213,6 @@ export default function WarehousesPage() {
             );
           })}
         </div>
-
-        {/* LANDSCAPE SECTION */}
-        {/* <section className="space-y-6">
-          <h2 className="text-2xl font-semibold">Landscape & Site Features</h2>
-          <ul className="text-gray-300 text-sm space-y-1">
-            <li>• Kentucky Blue Grass lawn areas</li>
-            <li>• New concrete pedestrian pathways</li>
-            <li>• Canopy trees + shrubs for green appeal</li>
-            <li>• 2500L rainwater tank for sustainability</li>
-            <li>• Clean driveways and organised circulation</li>
-          </ul>
-        </section> */}
       </main>
     </div>
   );

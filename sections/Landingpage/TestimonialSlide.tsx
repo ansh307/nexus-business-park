@@ -31,7 +31,10 @@ const TestimonialSlide = ({
   };
 
   return (
-    <div className="w-full flex flex-col justify-center gap-8 md:min-h-[40vh] lg:min-h-[60vh] ">
+    <div
+      id="testimonials-section"
+      className="w-full flex flex-col justify-center gap-8 md:min-h-[40vh] lg:min-h-[60vh] "
+    >
       {/* Quote */}
       <div className="relative text-light px-2 sm:px-4">
         <span className="absolute -top-6 left-0 text-5xl sm:text-6xl md:text-7xl font-extrabold opacity-30">

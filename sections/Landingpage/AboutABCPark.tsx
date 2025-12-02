@@ -3,19 +3,11 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { AboutExpectations } from "@/constants";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutABCPark = () => {
-  const expectations = [
-    "Architecturally designed, modern warehouse spaces",
-    "High-clearance interiors suitable for multiple industries",
-    "Excellent truck and vehicle access",
-    "Secure, low-maintenance design",
-    "Move-in-ready by late 2025",
-    "Only 17 units — limited supply, increasing long-term value",
-  ];
-
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const leftRef = useRef<HTMLDivElement | null>(null);
   const rightRef = useRef<HTMLDivElement | null>(null);
@@ -65,6 +57,7 @@ const AboutABCPark = () => {
 
   return (
     <div
+      id="about-section"
       ref={sectionRef}
       className=" mx-auto  px-4 md:px-12 lg:px-34  py-20 md:py-28 "
     >
@@ -77,7 +70,7 @@ const AboutABCPark = () => {
             </h3>
 
             <div className="space-y-4 ">
-              {expectations.map((text, index) => (
+              {AboutExpectations.map((text, index) => (
                 <div key={index} className="flex items-start group expect-item">
                   <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5 mr-4 transition-colors duration-300">
                     <svg

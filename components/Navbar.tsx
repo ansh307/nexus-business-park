@@ -1,6 +1,30 @@
+"use client";
+
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
 const Navbar = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // Scroll or navigate
+  const scrollOrNavigate = (id: string, targetPage: string = "/") => {
+    if (pathname === targetPage) {
+      // Already on the page → just scroll
+      const el = document.getElementById(id);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+      }
+      return;
+    }
+
+    // Navigating to different page → store id first
+    localStorage.setItem("scrollTo", id);
+    router.push(targetPage);
+  };
+
   return (
     <header
       className="
@@ -19,24 +43,39 @@ const Navbar = () => {
       <nav>
         <ul className="flex text-sm sm:text-base items-center gap-6 sm:gap-8 uppercase text-white">
           <li>
-            <a href="/warehouses" className="">
+            <button
+              onClick={() => router.push("/warehouses")}
+              className="cursor-pointer"
+            >
               Warehouses
-            </a>
+            </button>
           </li>
+
           <li>
-            <a href="#" className="">
+            <button
+              onClick={() => scrollOrNavigate("brochure-section")}
+              className="cursor-pointer"
+            >
               Brochure
-            </a>
+            </button>
           </li>
+
           <li>
-            <a href="#" className="">
+            <button
+              onClick={() => scrollOrNavigate("about-section")}
+              className="cursor-pointer"
+            >
               About
-            </a>
+            </button>
           </li>
+
           <li>
-            <a href="/contact" className="">
+            <button
+              onClick={() => router.push("/contact")}
+              className="cursor-pointer"
+            >
               Contact
-            </a>
+            </button>
           </li>
         </ul>
       </nav>

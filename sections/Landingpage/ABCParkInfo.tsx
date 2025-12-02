@@ -3,37 +3,9 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { parkInfoFeatures } from "@/constants";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const features = [
-  {
-    title: "Prime Cardinia Road Position",
-    description: "Only minutes to the Monash Freeway.",
-  },
-  {
-    title: "Versatile Usage",
-    description: "Ideal for business operations or storage.",
-  },
-  {
-    title: "Dedicated Car Parking",
-    description: "Each warehouse includes minimum 3 car parks.",
-  },
-  {
-    title: "High-Growth Precinct",
-    description:
-      "Demand for industrial space in the South East is skyrocketing.",
-  },
-  {
-    title: "Premium Architectural Design",
-    description:
-      "Modern façades, high internal clearance, high-quality finishes.",
-  },
-  {
-    title: "Exclusive Development",
-    description: "The only strata warehouses approved in this booming area.",
-  },
-];
 
 export default function ABCParkInfo() {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -101,14 +73,14 @@ export default function ABCParkInfo() {
           </h2>
         </div>
 
-        {/* Features Grid */}
+        {/* parkInfoFeatures Grid */}
         <div
           className="
             grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
             gap-4 md:gap-5 lg:gap-6
           "
         >
-          {features.map((f) => (
+          {parkInfoFeatures.map((f) => (
             <div
               key={f.title}
               className="
