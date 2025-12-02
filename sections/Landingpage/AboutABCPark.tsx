@@ -21,36 +21,46 @@ const AboutABCPark = () => {
   const rightRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const left = leftRef.current;
-    const right = rightRef.current;
-    if (!section || !left || !right) return;
+    const ctx = gsap.context(() => {
+      const left = leftRef.current;
+      const right = rightRef.current;
 
-    // 🌟 Fade + Slide Left Items on Scroll
-    gsap.from(left.querySelectorAll(".expect-item"), {
-      opacity: 0,
-      x: -40,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: left,
-        start: "top 80%",
-      },
-    });
+      if (!left || !right) return;
 
-    // 🌟 Animate Heading & Paragraphs
-    gsap.from(right.querySelectorAll(".right-animate"), {
-      opacity: 0,
-      y: 40,
-      duration: 1,
-      stagger: 0.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: right,
-        start: "top 80%",
-      },
-    });
+      // LEFT SIDE ANIMATION
+      gsap.from(left.querySelectorAll(".expect-item"), {
+        opacity: 0,
+        x: -40,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: left,
+          start: "top 85%",
+        },
+      });
+
+      // RIGHT SIDE TEXT ANIMATION
+      gsap.from(right.querySelectorAll(".right-animate"), {
+        opacity: 0,
+        y: 40,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: right,
+          start: "top 85%",
+        },
+      });
+
+      // Required for Next.js page transitions
+      setTimeout(() => ScrollTrigger.refresh(), 100);
+    }, sectionRef);
+
+    return () => {
+      ctx.revert(); // kill all animations in this component
+      ScrollTrigger.getAll().forEach((st) => st.kill()); // kill stray triggers
+    };
   }, []);
 
   return (

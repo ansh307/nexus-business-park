@@ -11,41 +11,51 @@ export default function LocationHighlights() {
   const cardsRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const cards = cardsRef.current;
-    if (!section || !cards) return;
+    const ctx = gsap.context(() => {
+      const section = sectionRef.current;
+      const cards = cardsRef.current;
+      if (!section || !cards) return;
 
-    // 🟦 Clip-path reveal animation for background box
-    gsap.fromTo(
-      section,
-      {
-        clipPath: "inset(10% 10% 10% 10% round 0px)",
-      },
-      {
-        clipPath: "inset(0% 0% 0% 0% round 0px)",
-        ease: "power3.out",
-        duration: 4,
-        scrollTrigger: {
-          trigger: section,
-          start: "top 90%",
-          end: "top top",
-          scrub: true,
+      // 🟦 Clip-path reveal animation
+      gsap.fromTo(
+        section,
+        {
+          clipPath: "inset(10% 10% 10% 10% round 0px)",
         },
-      }
-    );
+        {
+          clipPath: "inset(0% 0% 0% 0% round 0px)",
+          ease: "power3.out",
+          duration: 4,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 90%",
+            end: "top top",
+            scrub: true,
+          },
+        }
+      );
 
-    // 🟧 Fade + rise cards animation
-    gsap.from(cards.querySelectorAll(".card-item"), {
-      opacity: 0,
-      y: 40,
-      duration: 0.8,
-      stagger: 0.18,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: cards,
-        start: "top 80%",
-      },
-    });
+      // 🟧 Fade + rise cards animation
+      gsap.from(cards.querySelectorAll(".card-item"), {
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        stagger: 0.18,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: cards,
+          start: "top 85%",
+        },
+      });
+
+      // Helps ensure animations fire again on navigation
+      setTimeout(() => ScrollTrigger.refresh(), 120);
+    }, sectionRef);
+
+    return () => {
+      ctx.revert(); // kills all animations inside this component
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
   }, []);
 
   return (

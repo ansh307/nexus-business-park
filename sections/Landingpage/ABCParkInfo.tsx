@@ -39,27 +39,40 @@ export default function ABCParkInfo() {
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return;
+    const ctx = gsap.context(() => {
+      const section = sectionRef.current;
+      if (!section) return;
 
-    const items = section.querySelectorAll(".wwa-content");
+      const items = section.querySelectorAll(".wwa-content");
 
-    items.forEach((item) => {
-      const innerParts = item.querySelectorAll(".wwa-part");
+      items.forEach((item) => {
+        const innerParts = item.querySelectorAll(".wwa-part");
 
-      gsap.from(innerParts, {
-        xPercent: -100,
-        opacity: 1,
-        duration: 1,
-        stagger: 0.15,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: item,
-          start: "top 90%",
-          toggleActions: "play none none reverse",
-        },
+        gsap.from(innerParts, {
+          xPercent: -100,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        });
       });
-    });
+
+      // Force ScrollTrigger recalculation after navigation
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
+    }, sectionRef);
+
+    return () => {
+      ctx.revert(); // remove all animations
+      ScrollTrigger.clearMatchMedia();
+      ScrollTrigger.getAll().forEach((st) => st.kill()); // kill old triggers
+    };
   }, []);
 
   return (
