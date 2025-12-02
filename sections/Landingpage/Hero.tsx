@@ -1,11 +1,68 @@
-import Navbar from "@/components/Navbar";
-import Image from "next/image";
+"use client";
 import Link from "next/link";
-import React from "react";
+import gsap from "gsap";
+import { useEffect, useRef } from "react";
+
+import Navbar from "@/components/Navbar";
 
 const Hero = () => {
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".hero-title",
+        {
+          y: 80,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 2,
+          ease: "power4.out",
+        }
+      );
+
+      gsap.fromTo(
+        ".hero-nexus",
+        {
+          y: 80,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 2,
+          delay: 0.3,
+          ease: "power4.out",
+        }
+      );
+
+      gsap.fromTo(
+        ".hero-enquiry-cta",
+        {
+          y: 0,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 2,
+          delay: 1,
+          ease: "power4.out",
+        }
+      );
+    }, heroRef);
+
+    return () => ctx.revert(); // cleanup on hot reload/unmount
+  }, []);
+
   return (
-    <section className="relative h-[110vh] w-full overflow-hidden section-dark">
+    <section
+      ref={heroRef}
+      className="relative h-[110vh] w-full overflow-hidden section-dark"
+    >
       <div className="absolute inset-0 z-0">
         <img
           src="/hero-section-new.png"
@@ -21,19 +78,23 @@ const Hero = () => {
       <div className="relative z-10 flex h-full flex-col px-6 md:px-12 lg:px-24  ">
         {/* Main Content */}
         <div className="flex flex-1 flex-col items-center justify-center text-center  pb-20 px-10 ">
-          <h1 className="max-w-4xl text-5xl font-bold font-interTight-700 leading-tight tracking-tight md:text-6xl lg:text-7xl ">
-            Warehouse Architecture <br />
-            <span className="md:text-6xl lg:text-[100px] tracking-wide">
+          <div className="leading-tight max-w-4xl   overflow-hidden">
+            <h1 className="hero-title max-w-4xl text-5xl font-bold font-interTight-700  tracking-tight md:text-6xl lg:text-7xl opacity-0">
+              Warehouse Architecture
+            </h1>
+          </div>
+          <div className="leading-tight max-w-4xl overflow-hidden">
+            <h1 className="hero-nexus text-5xl md:text-6xl lg:text-[100px] font-bold font-interTight-700  tracking-wide  opacity-0">
               NEXUS
-            </span>
-          </h1>
+            </h1>
+          </div>
 
           {/* <p className="mt-6 max-w-2xl text-lg text-gray-200 md:text-xl">
             Premium strata warehouses in the heart of Officer South's
             fastest-growing industrial precinct.
           </p> */}
 
-          <div className="mt-10">
+          <div className="hero-enquiry-cta mt-10 opacity-0">
             <Link
               href="/contact"
               className="group flex items-center gap-3 border border-light rounded-full  px-8 py-3 text-base font-semibold transition-all hover:bg-white hover:text-black"
