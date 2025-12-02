@@ -1,3 +1,4 @@
+import Home from "@/app/page";
 import React from "react";
 
 // ABCParkInfo Data
@@ -126,17 +127,17 @@ export const developmentOverviewSections = [
 
 export const footerLinks = [
   {
-    title: "PROJECT",
-    links: ["Overview", "Warehouses", "Location"],
+    title: "QUICK LINKS",
+    links: ["Home", "Overview", "Warehouses", "Location"],
   },
   {
     title: "RESOURCES",
-    links: ["Brochure", "Floor Plans", "Testimonials"],
+    links: ["Brochure", "Testimonials", "Contact"],
   },
-  {
-    title: "COMPANY",
-    links: ["Developer", "Contact", "Privacy Policy", "Disclaimer"],
-  },
+  // {
+  //   title: "COMPANY",
+  //   links: ["Developer", "Contact", "Privacy Policy", "Disclaimer"],
+  // },
 ];
 
 export const scrollTargets: Record<string, { id?: string; page?: string }> = {
@@ -146,6 +147,7 @@ export const scrollTargets: Record<string, { id?: string; page?: string }> = {
 
   Brochure: { id: "brochure-section", page: "/" },
   "Floor Plans": { id: "#", page: "/" },
+  Home: { page: "/" },
 
   Testimonials: { id: "testimonials-section", page: "/" },
 

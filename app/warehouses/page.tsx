@@ -60,6 +60,9 @@ export default function WarehousesPage() {
               businesses. Featuring high-clearance storage, first-floor offices,
               secure roller access, and clean contemporary architecture.
             </p>
+            <p className="text-xs uppercase tracking-[0.2em] text-muted/70">
+              No Stamp Duty • Final Stage Pre-Sale
+            </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 max-w-xl mt-14">

@@ -36,9 +36,12 @@ const Navbar = () => {
         z-30
       "
     >
-      <div className="text-xl font-light tracking-wide md:text-2xl uppercase">
+      <button
+        onClick={() => router.push("/")}
+        className="text-xl font-light tracking-wide md:text-2xl uppercase"
+      >
         Nexus
-      </div>
+      </button>
 
       <nav>
         <ul className="flex text-sm sm:text-base items-center gap-6 sm:gap-8 uppercase text-white">

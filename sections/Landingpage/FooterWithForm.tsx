@@ -36,7 +36,7 @@ const FooterWithForm = () => {
   };
 
   return (
-    <section className="section-dark w-full py-20 md:py-28 border-t border-muted-top ">
+    <section className="section-dark w-full py-20 md:pt-28 md:pb-20 border-t border-muted-top ">
       <div className=" mx-auto px-6 md:px-8 lg:px-34 grid grid-cols-1 md:grid-cols-12 gap-16">
         {/* LEFT COLUMN — BRAND + CONTACT + NEWSLETTER */}
         <div className="md:col-span-5 space-y-8">
@@ -48,11 +48,11 @@ const FooterWithForm = () => {
           {/* Contact */}
           <div className="space-y-1 text-light/80 text-sm md:text-base">
             <p>Email: info@nexusbusinesspark.com.au</p>
-            <p>Phone: +61 488 823 327</p>
+            <p>Phone: +61 123 823 327</p>
           </div>
 
           {/* Newsletter */}
-          <div className="pt-6 space-y-4 max-w-md">
+          {/* <div className="pt-6 space-y-4 max-w-md">
             <p className="text-light text-sm md:text-base">
               Subscribe to our Newsletter
             </p>
@@ -79,10 +79,10 @@ const FooterWithForm = () => {
             <button className="mt-4 px-8 py-2 rounded-full border border-light text-light text-sm hover:bg-light hover:text-dark transition-all">
               Submit
             </button>
-          </div>
+          </div> */}
         </div>
 
-        <div className="md:col-span-5 md:col-start-7 grid grid-cols-2 md:grid-cols-3 gap-10">
+        <div className="md:col-span-5 md:col-start-7 grid grid-cols-2 md:grid-cols-2 gap-10">
           {footerLinks.map((group, index) => (
             <div className="space-y-4" key={index}>
               <p className="text-light font-semibold text-sm tracking-wide">
@@ -115,21 +115,21 @@ const FooterWithForm = () => {
       </div>
 
       {/* FOOTER BOTTOM */}
-      <div className=" mx-auto px-6 md:px-8 lg:px-34 mt-16 flex flex-col md:flex-row justify-between items-center gap-8">
+      <div className=" mx-auto px-6 md:px-8 lg:px-34 mt-24 flex flex-col md:flex-row justify-between items-center gap-8">
         {/* Copyright */}
         <p className="text-light/60 text-xs">
           © 2025 Nexus Business Park · All Rights Reserved
         </p>
 
         {/* Social Icons */}
-        <div className="flex items-center gap-6 text-light">
+        {/* <div className="flex items-center gap-6 text-light">
           <button
             onClick={() => router.push("/contact")}
             className="text-light/70 text-sm cursor-pointer"
           >
             Connect with us
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

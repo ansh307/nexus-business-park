@@ -72,7 +72,7 @@ const ContactPage = () => {
           {/* Contact */}
           <div className="space-y-1 text-light/80 text-sm md:text-base">
             <p>Email: info@nexusbusinesspark.com.au</p>
-            <p>Phone: +61 488 823 327</p>
+            <p>Phone: +61 123 823 327</p>
           </div>
 
           {/* Physical Address */}
@@ -112,9 +112,8 @@ const ContactPage = () => {
       <div className="mx-auto px-6 md:px-8 lg:px-34 grid grid-cols-1 md:grid-cols-12 gap-16 mt-16 ">
         {/* LEFT COLUMN */}
         <div className="md:col-span-5 space-y-10 ">
-          {/* SALE CONTACT CARDS */}
           <div className="space-y-4 contact-cards-wrapper ">
-            <div className="bg-[#1a1a1a] p-5 rounded-xl text-light space-y-2">
+            {/* <div className="bg-[#1a1a1a] p-5 rounded-xl text-light space-y-2">
               <p className="font-semibold text-lg">Nexus Business Park Sales</p>
               <img
                 src="/sale-1.png"
@@ -131,23 +130,19 @@ const ContactPage = () => {
               <p className="text-sm">
                 <span className="font-semibold">P: </span>0468 860 737
               </p>
-            </div>
-
-            {/* <div className="border-t border-gray-300/20" /> */}
+            </div> */}
 
             <div className="bg-[#1a1a1a] p-5 rounded-xl text-light space-y-2">
               <p className="font-semibold text-lg">Sales Enquiries</p>
               <p className="text-sm">General Sales Support</p>
               <p className="text-sm">E: sales@nexus.com.au</p>
-              <p className="text-sm">P: +61 400 123 456</p>
+              <p className="text-sm">P: +61 123 123 456</p>
             </div>
-
-            {/* <div className="border-t border-gray-300/20" /> */}
 
             <div className="bg-[#1a1a1a] p-5 rounded-xl text-light space-y-2">
               <p className="font-semibold text-lg">Commercial Team</p>
               <p className="text-sm">E: commercial@nexus.com.au</p>
-              <p className="text-sm">P: +61 411 555 987</p>
+              <p className="text-sm">P: +61 123 555 987</p>
             </div>
           </div>
         </div>

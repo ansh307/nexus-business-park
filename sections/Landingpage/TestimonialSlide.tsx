@@ -51,7 +51,7 @@ const TestimonialSlide = ({
       </div>
 
       {/* Profile */}
-      <div className="flex items-center gap-4 mt-4">
+      {/* <div className="flex items-center gap-4 mt-4">
         <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border border-black/20 shadow-lg">
           <Image
             src={profileImg}
@@ -68,7 +68,7 @@ const TestimonialSlide = ({
           </p>
           <p className="text-xs sm:text-sm md:text-base text-muted">{title}</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
