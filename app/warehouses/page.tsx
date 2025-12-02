@@ -6,7 +6,7 @@ const warehouseData = [
     id: 1,
     wh: 387.2,
     office: 102.3,
-    imagePath: "/7.png",
+    imagePath: "/warehouses/wh1.png",
     description:
       "A spacious industrial warehouse with a generous office space, ideal for medium-scale operations and expanding logistics teams.",
   },
@@ -14,7 +14,7 @@ const warehouseData = [
     id: 2,
     wh: 179.0,
     office: 75.8,
-    imagePath: "/8.png",
+    imagePath: "/warehouses/wh12.png",
     description:
       "A compact, efficient warehouse designed for startups, local distributors, and businesses needing secure, modern storage.",
   },
@@ -22,7 +22,7 @@ const warehouseData = [
     id: 3,
     wh: 227.7,
     office: 75.8,
-    imagePath: "/9.png",
+    imagePath: "/warehouses/wh5-4-6.png",
     description:
       "Balanced warehouse and office proportions make this unit perfect for growing businesses seeking practicality and style.",
   },
@@ -30,7 +30,7 @@ const warehouseData = [
     id: 4,
     wh: 227.7,
     office: 75.8,
-    imagePath: "/7.png",
+    imagePath: "/warehouses/wh1-2-3.png",
     description:
       "A versatile warehouse designed for flexible workflows, offering excellent clearance and a refined upper-level office.",
   },
@@ -38,7 +38,7 @@ const warehouseData = [
     id: 5,
     wh: 179.0,
     office: 75.8,
-    imagePath: "/8.png",
+    imagePath: "/warehouses/wh6-7.png",
     description:
       "An efficient warehouse unit ideal for smaller teams, e-commerce operations, or local distribution hubs.",
   },
@@ -46,7 +46,7 @@ const warehouseData = [
     id: 6,
     wh: 254.9,
     office: 95.7,
-    imagePath: "/9.png",
+    imagePath: "/warehouses/wh-10-11-12.png",
     description:
       "A premium mid-sized warehouse offering a strong mix of storage capacity and a bright, modern office space.",
   },
@@ -54,7 +54,7 @@ const warehouseData = [
     id: 7,
     wh: 254.9,
     office: 95.7,
-    imagePath: "/7.png",
+    imagePath: "/warehouses/wh-7-8-9.png",
     description:
       "Designed for operational efficiency, this warehouse features excellent floor space paired with a functional upper office.",
   },
