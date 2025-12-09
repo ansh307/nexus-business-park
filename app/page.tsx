@@ -97,7 +97,7 @@ export default function Home() {
       <AboutABCPark />
       {/* <GSAPImageCarousel /> */}
       {/* <FeaturesSection /> */}
-      <LocationHighlights />
+      {/* <LocationHighlights /> */}
       {/* <RoundedCityImage />
       <AffordableWarehouseSection /> */}
       <WarehouseShowcase />
