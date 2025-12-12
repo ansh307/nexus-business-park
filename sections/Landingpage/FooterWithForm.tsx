@@ -1,5 +1,6 @@
 "use client";
 import { footerLinks, scrollTargets } from "@/constants";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
@@ -41,9 +42,16 @@ const FooterWithForm = () => {
         {/* LEFT COLUMN — BRAND + CONTACT + NEWSLETTER */}
         <div className="md:col-span-5 space-y-8">
           {/* Brand Name */}
-          <h2 className="text-light text-3xl md:text-4xl font-light tracking-wider">
+          {/* <h2 className="text-light text-3xl md:text-4xl font-light tracking-wider">
             NEXUS BUSINESS PARK
-          </h2>
+          </h2> */}
+          <Image
+            src="/logo-2.png"
+            alt="Company Logo"
+            width={170}
+            height={50}
+            className="object-contain"
+          />
 
           {/* Contact */}
           <div className="space-y-1 text-light/80 text-sm md:text-base">

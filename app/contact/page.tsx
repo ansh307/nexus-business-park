@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Image from "next/image";
 
 const ContactPage = () => {
   const wrapperRef = useRef(null);
@@ -65,9 +66,16 @@ const ContactPage = () => {
       <div className="flex lg:flex-row flex-col gap-10 lg:gap-0 justify-between mx-auto px-6 md:px-8 lg:px-34">
         <div className="order-2 lg:order-1 space-y-6 contact-header opacity-0">
           {/* Brand Name */}
-          <h2 className="text-5xl font-semibold tracking-tight text-light  md:text-4xl ">
+          {/* <h2 className="text-5xl font-semibold tracking-tight text-light  md:text-4xl ">
             NEXUS BUSINESS PARK
-          </h2>
+          </h2> */}
+          <Image
+            src="/logo-2.png"
+            alt="Company Logo"
+            width={200}
+            height={50}
+            className="object-contain"
+          />
 
           {/* Contact */}
           <div className="space-y-1 text-light/80 text-sm md:text-base">

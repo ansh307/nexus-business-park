@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
@@ -50,7 +51,13 @@ const Navbar = () => {
         onClick={() => router.push("/")}
         className="text-xl font-light tracking-wide md:text-2xl uppercase"
       >
-        Nexus
+        <Image
+          src="/logo-2.png"
+          alt="Company Logo"
+          width={105}
+          height={50}
+          className="object-contain"
+        />
       </button>
 
       {/* Hamburger Icon for Mobile */}
